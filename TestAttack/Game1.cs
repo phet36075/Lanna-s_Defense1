@@ -19,7 +19,7 @@ namespace TestAttack
        
         public List<Enemy> Enemies = new List<Enemy>(maxEnemy);
         public int timer = 60;
-        public static int maxEnemy = 5;
+        public static int maxEnemy = 10;
        // private List<Player> _players;
         public Game1()
         {
@@ -101,7 +101,8 @@ namespace TestAttack
                     if(_bullet.Lasthit == true)
                     {
                         Enemies[maxEnemy - 1].Position = new Vector2(-100, -100);
-                       // _bullet.Position = new Vector2(-500, 500);
+                        
+                      
                     }
                     
                 }

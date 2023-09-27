@@ -19,7 +19,7 @@ namespace TestAttack
 
         public override void Update(GameTime theTime)
         {
-            this.Position.X += 1;
+            //this.Position.X += 1;
            
             
             base.Update(theTime);

@@ -15,6 +15,8 @@ namespace TestBullet
         public bool Ishit;
         public bool Lasthit = false;
         public int Counter =0;
+
+        public int t = 10;
         public override void Shoot(Sprite followTarget)
         {
             FollowTarget = followTarget;
@@ -30,7 +32,7 @@ namespace TestBullet
             if (currentDistance > FollowDistance)
             {
                 //var t = MathHelper.Min((float)Math.Abs(currentDistance - FollowDistance), LinearVelocity);
-                var t = 10;
+                //var t = 10;
                 var velocity = Direction * t;
 
                 Position += velocity;
@@ -58,19 +60,19 @@ namespace TestBullet
                     this.Position = new Vector2(600, 600);
                     Counter +=1;
                         Console.WriteLine("CounterAfter = " + Counter);
-                    }
-                    else if(Counter == Game1.maxEnemy-1 )
+                    }     
+            }
+
+            if (Counter == Game1.maxEnemy - 1)
+            {
+                if (BulletRectangle.Intersects(PlayerRectangle))
                 {
-                    Lasthit = true;
-                    //this.Position = new Vector2(200, 500);
-                }
-                   
-                       
                     
-
-                
-
-
+                    Lasthit = true;
+                    Console.WriteLine(Lasthit);
+                    t = 0;
+                }
+                //this.Position = new Vector2(200, 500);
             }
 
         }
