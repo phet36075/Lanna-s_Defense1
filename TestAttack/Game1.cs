@@ -69,7 +69,7 @@ namespace TestAttack
             foreach (var Enemy in Enemies)
                 Enemy.Update(gameTime);
                 _player.Move();
-            _unit.Shoot(Enemies[_bullet.Counter]);
+            _unit.Follow(Enemies[_bullet.Counter]);
              _bullet.Shoot(Enemies[_bullet.Counter]);
             
             Checktimer();

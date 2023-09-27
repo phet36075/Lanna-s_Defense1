@@ -11,7 +11,9 @@ namespace TestAttack
 {
     public class Unit : Sprite
     {
-        public override void Shoot(Sprite followTarget)
+
+        Bullet _bullet;
+        public void Follow(Sprite followTarget)
         {
             FollowTarget = followTarget;
             if (FollowTarget == null)
@@ -24,6 +26,11 @@ namespace TestAttack
         }
         public Unit(Texture2D texture) : base(texture)
         {
+        }
+
+        public override void Update(GameTime theTime)
+        {
+          //  _bullet.Shoot(FollowTarget);
         }
         public override void Draw(SpriteBatch spriteBatch)
         {

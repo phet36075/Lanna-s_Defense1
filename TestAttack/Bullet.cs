@@ -43,7 +43,7 @@ namespace TestBullet
         public override void Update(GameTime theTime)
         {
             
-            Console.WriteLine(timer);
+          
             base.Update(theTime);
         }
         public void CollisionCheck()
@@ -76,7 +76,7 @@ namespace TestBullet
             }
 
         }
-
+       
         public override void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, Position, null, Color.White, Rotation, Origin, 1f, SpriteEffects.None, Layer);

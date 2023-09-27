@@ -3,10 +3,14 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 namespace TestAttack
 {
-    public class IEmu
+    public abstract class IEmu
     {
 
         public virtual void Update(GameTime theTime)
+        {
+        }
+
+        public virtual void Draw(SpriteBatch spriteBatch) 
         {
         }
 
