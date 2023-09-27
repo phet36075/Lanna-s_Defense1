@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Lanna_s_Defense
 {
@@ -34,7 +35,7 @@ namespace Lanna_s_Defense
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
+            Console.WriteLine("Hello World");
             // TODO: Add your update logic here
 
             base.Update(gameTime);
