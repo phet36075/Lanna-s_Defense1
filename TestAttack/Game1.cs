@@ -15,6 +15,7 @@ namespace TestAttack
         private SpriteBatch _spriteBatch;
         Player _player;
         Bullet _bullet;
+        Unit _unit;
        
         public List<Enemy> Enemies = new List<Enemy>(maxEnemy);
         public int timer = 60;
@@ -43,6 +44,7 @@ namespace TestAttack
             var texture = Content.Load<Texture2D>("char1");
             var texture3 = Content.Load<Texture2D>("osu2");
             var texture2 = Content.Load<Texture2D>("bullet3");
+            
           
             for (int i = 0; i < maxEnemy; i++)
             {
@@ -56,16 +58,20 @@ namespace TestAttack
             }
 
             _player = new Player(texture) { Position = new Vector2(100, 100), speed = 10 };
-            _bullet = new Bullet(texture2) { Position = new Vector2(300, 100), };
+            _bullet = new Bullet(texture2) { Position = new Vector2(600, 600), };
+            _unit = new Unit(texture) { Position = new Vector2(600, 600), };
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            _player.Move();      
-   
+            foreach (var Enemy in Enemies)
+                Enemy.Update(gameTime);
+                _player.Move();
+            _unit.Shoot(Enemies[_bullet.Counter]);
              _bullet.Shoot(Enemies[_bullet.Counter]);
+            
             Checktimer();
             
             base.Update(gameTime);
@@ -77,6 +83,7 @@ namespace TestAttack
             _spriteBatch.Begin();
             _player.Draw(_spriteBatch);
             _bullet.Draw(_spriteBatch);
+            _unit.Draw(_spriteBatch);  
             foreach (var Enemy in Enemies)
                 Enemy.Draw(_spriteBatch);
             _spriteBatch.End();

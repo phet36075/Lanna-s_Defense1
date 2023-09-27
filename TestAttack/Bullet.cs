@@ -29,7 +29,8 @@ namespace TestBullet
             var currentDistance = Vector2.Distance(this.Position, FollowTarget.Position);
             if (currentDistance > FollowDistance)
             {
-                var t = MathHelper.Min((float)Math.Abs(currentDistance - FollowDistance), LinearVelocity);
+                //var t = MathHelper.Min((float)Math.Abs(currentDistance - FollowDistance), LinearVelocity);
+                var t = 10;
                 var velocity = Direction * t;
 
                 Position += velocity;
@@ -46,8 +47,8 @@ namespace TestBullet
         public void CollisionCheck()
         {
 
-            Rectangle BulletRectangle = new Rectangle((int)this.Position.X, (int)this.Position.Y, 32, 48);
-            Rectangle PlayerRectangle = new Rectangle((int)FollowTarget.Position.X, (int)FollowTarget.Position.Y, 32, 48);
+            Rectangle BulletRectangle = new Rectangle((int)this.Position.X, (int)this.Position.Y, 50, 50);
+            Rectangle PlayerRectangle = new Rectangle((int)FollowTarget.Position.X, (int)FollowTarget.Position.Y, 50, 50);
             if (BulletRectangle.Intersects(PlayerRectangle))
             {
                 Ishit = true;
