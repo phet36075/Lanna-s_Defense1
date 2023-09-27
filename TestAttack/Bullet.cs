@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-
+using TestAttack;
 
 namespace TestBullet
 {
@@ -51,7 +51,7 @@ namespace TestBullet
             {
                 Ishit = true;
                 
-                    if (Counter < 4)
+                    if (Counter < Game1.maxPlayer-1)
                     {
                         Counter++;
                         Console.WriteLine("Counter = " +Counter);

@@ -18,6 +18,7 @@ namespace TestAttack
         public bool Ishit;
         public List<Player> players = new List<Player>(5);
         public int timer = 60;
+        public static int maxPlayer =5;
        // private List<Player> _players;
         public Game1()
         {
@@ -43,7 +44,7 @@ namespace TestAttack
             var texture3 = Content.Load<Texture2D>("osu2");
             var texture2 = Content.Load<Texture2D>("bullet3");
           
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= maxPlayer; i++)
             {
                 players.Add(new Player(texture3));
                
