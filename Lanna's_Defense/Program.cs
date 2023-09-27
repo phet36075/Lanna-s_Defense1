@@ -1,3 +1,14 @@
-﻿
-using var game = new Lanna_s_Defense.Game1();
-game.Run();
+﻿using System;
+
+namespace Lanna_s_Defense
+{
+    public static class Program
+    {
+        [STAThread]
+        static void Main()
+        {
+            using (var game = new Game1())
+                game.Run();
+        }
+    }
+}

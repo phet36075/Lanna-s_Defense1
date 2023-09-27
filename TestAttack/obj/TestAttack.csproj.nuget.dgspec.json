@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\petch\\source\\repos\\Lanna's_Defense\\TestAttack\\TestAttack.csproj": {}
+    "D:\\Lanna-s_Defense1\\TestAttack\\TestAttack.csproj": {}
   },
   "projects": {
-    "C:\\Users\\petch\\source\\repos\\Lanna's_Defense\\TestAttack\\TestAttack.csproj": {
+    "D:\\Lanna-s_Defense1\\TestAttack\\TestAttack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\petch\\source\\repos\\Lanna's_Defense\\TestAttack\\TestAttack.csproj",
+        "projectUniqueName": "D:\\Lanna-s_Defense1\\TestAttack\\TestAttack.csproj",
         "projectName": "TestAttack",
-        "projectPath": "C:\\Users\\petch\\source\\repos\\Lanna's_Defense\\TestAttack\\TestAttack.csproj",
-        "packagesPath": "C:\\Users\\petch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\petch\\source\\repos\\Lanna's_Defense\\TestAttack\\obj\\",
+        "projectPath": "D:\\Lanna-s_Defense1\\TestAttack\\TestAttack.csproj",
+        "packagesPath": "C:\\Users\\Mac\\.nuget\\packages\\",
+        "outputPath": "D:\\Lanna-s_Defense1\\TestAttack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\petch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
