@@ -15,10 +15,10 @@ namespace TestAttack
         private SpriteBatch _spriteBatch;
         Player _player;
         Bullet _bullet;
-        public bool Ishit;
-        public List<Enemy> Enemies = new List<Enemy>(5);
+       
+        public List<Enemy> Enemies = new List<Enemy>(maxEnemy);
         public int timer = 60;
-        public static int maxPlayer =5;
+        public static int maxEnemy = 5;
        // private List<Player> _players;
         public Game1()
         {
@@ -44,7 +44,7 @@ namespace TestAttack
             var texture3 = Content.Load<Texture2D>("osu2");
             var texture2 = Content.Load<Texture2D>("bullet3");
           
-            for (int i = 1; i <= maxPlayer; i++)
+            for (int i = 0; i < maxEnemy; i++)
             {
                 Enemies.Add(new Enemy(texture3));
                
@@ -79,12 +79,7 @@ namespace TestAttack
             _bullet.Draw(_spriteBatch);
             foreach (var Enemy in Enemies)
                 Enemy.Draw(_spriteBatch);
-
-           // foreach (var player in _players)
-             //   player.Draw(_spriteBatch);
             _spriteBatch.End();
-            // TODO: Add your drawing code here
-
             base.Draw(gameTime);
         }
 
@@ -92,12 +87,20 @@ namespace TestAttack
         {
             if (_bullet.Ishit == true)
             {
-                
-                    Enemies[_bullet.Counter-1].Position = new Vector2(-100, -100);
-                
+             
+             Enemies[_bullet.Counter-1].Position = new Vector2(-100, -100);
+                if (_bullet.Counter == maxEnemy-1)
+                {
+                    if(_bullet.Lasthit == true)
+                    {
+                        Enemies[maxEnemy - 1].Position = new Vector2(-100, -100);
+                       // _bullet.Position = new Vector2(-500, 500);
+                    }
+                    
+                }
                 timer--;
                 Console.WriteLine(timer);
-                _bullet.Position = new Vector2(0, 0);
+                _bullet.Position = new Vector2(600, 600);
                 if (timer <= 0)
                 {
                     _bullet.Ishit = false;

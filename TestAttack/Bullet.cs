@@ -13,6 +13,7 @@ namespace TestBullet
         }
         public int timer = 60;
         public bool Ishit;
+        public bool Lasthit = false;
         public int Counter =0;
         public override void Shoot(Sprite followTarget)
         {
@@ -50,16 +51,24 @@ namespace TestBullet
             if (BulletRectangle.Intersects(PlayerRectangle))
             {
                 Ishit = true;
-                
-                    if (Counter < Game1.maxPlayer-1)
+                Console.WriteLine("CounterBefore = " + Counter);
+                if (Counter < Game1.maxEnemy-1 )
                     {
-                        Counter++;
-                        Console.WriteLine("Counter = " +Counter);
+                    this.Position = new Vector2(600, 600);
+                    Counter +=1;
+                        Console.WriteLine("CounterAfter = " + Counter);
                     }
-                    else
-                        Console.WriteLine("Counter = " + Counter);
-                 this.Position = new Vector2(0, 0);
-                Console.WriteLine(timer);
+                    else if(Counter == Game1.maxEnemy-1 )
+                {
+                    Lasthit = true;
+                    //this.Position = new Vector2(200, 500);
+                }
+                   
+                       
+                    
+
+                
+
 
             }
 
