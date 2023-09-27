@@ -16,7 +16,7 @@ namespace TestAttack
         Player _player,_player2;
         Bullet _bullet;
         public bool Ishit;
-        public List<Player> players = new List<Player>(5);
+        public List<Enemy> Enemies = new List<Enemy>(5);
         public int timer = 60;
         public static int maxPlayer =5;
        // private List<Player> _players;
@@ -46,25 +46,17 @@ namespace TestAttack
           
             for (int i = 1; i <= maxPlayer; i++)
             {
-                players.Add(new Player(texture3));
+                Enemies.Add(new Enemy(texture3));
                
             }
-            foreach (var player in players)
+            foreach (var Enemy in Enemies)
             {
                 Random r = new Random();
-                player.Position = new Vector2(r.Next(0, 800), r.Next(0, 600));
+                Enemy.Position = new Vector2(r.Next(0, 800), r.Next(0, 600));
             }
 
             _player = new Player(texture) { Position = new Vector2(100, 100), speed = 10 };
-           // _player2 = new Player(texture) { Position = new Vector2(100, 100), speed = 10 };
             _bullet = new Bullet(texture2) { Position = new Vector2(300, 100), };
-
-           /* _players = new List<Player>()
-            {
-                
-                new Player(texture) {Position = new Vector2(200, 100), speed = 5}
-            };*/
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
@@ -72,9 +64,8 @@ namespace TestAttack
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             _player.Move();      
-            // foreach (var player in _players)
-            //player.Move();     
-             _bullet.Shoot(players[_bullet.Counter]);
+   
+             _bullet.Shoot(Enemies[_bullet.Counter]);
             Checktimer();
             
             base.Update(gameTime);
@@ -85,11 +76,9 @@ namespace TestAttack
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin();
             _player.Draw(_spriteBatch);
-            
             _bullet.Draw(_spriteBatch);
-
-            foreach (var player in players)
-                player.Draw(_spriteBatch);
+            foreach (var Enemy in Enemies)
+                Enemy.Draw(_spriteBatch);
 
            // foreach (var player in _players)
              //   player.Draw(_spriteBatch);
@@ -104,7 +93,7 @@ namespace TestAttack
             if (_bullet.Ishit == true)
             {
                 
-                    players[_bullet.Counter-1].Position = new Vector2(-100, -100);
+                    Enemies[_bullet.Counter-1].Position = new Vector2(-100, -100);
                 
                 timer--;
                 Console.WriteLine(timer);
