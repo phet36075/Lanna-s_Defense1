@@ -1,0 +1,5 @@
+C:\Users\petch\source\repos\Lanna's_Defense\TestBullet\obj\Debug\net6.0-windows\TestBullet.csproj.AssemblyReference.cache
+C:\Users\petch\source\repos\Lanna's_Defense\TestBullet\obj\Debug\net6.0-windows\TestBullet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petch\source\repos\Lanna's_Defense\TestBullet\obj\Debug\net6.0-windows\TestBullet.AssemblyInfoInputs.cache
+C:\Users\petch\source\repos\Lanna's_Defense\TestBullet\obj\Debug\net6.0-windows\TestBullet.AssemblyInfo.cs
+C:\Users\petch\source\repos\Lanna's_Defense\TestBullet\obj\Debug\net6.0-windows\TestBullet.csproj.CoreCompileInputs.cache

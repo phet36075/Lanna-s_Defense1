@@ -1,0 +1,5 @@
+C:\Users\petch\source\repos\Lanna's_Defense\Test1\obj\Debug\net6.0-windows\Test1.csproj.AssemblyReference.cache
+C:\Users\petch\source\repos\Lanna's_Defense\Test1\obj\Debug\net6.0-windows\Test1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\petch\source\repos\Lanna's_Defense\Test1\obj\Debug\net6.0-windows\Test1.AssemblyInfoInputs.cache
+C:\Users\petch\source\repos\Lanna's_Defense\Test1\obj\Debug\net6.0-windows\Test1.AssemblyInfo.cs
+C:\Users\petch\source\repos\Lanna's_Defense\Test1\obj\Debug\net6.0-windows\Test1.csproj.CoreCompileInputs.cache
