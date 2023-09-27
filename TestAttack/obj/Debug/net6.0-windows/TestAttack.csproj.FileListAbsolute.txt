@@ -37,3 +37,4 @@ C:\Users\petch\source\repos\Lanna's_Defense\TestAttack\obj\Debug\net6.0-windows\
 C:\Users\petch\source\repos\Lanna's_Defense\TestAttack\obj\Debug\net6.0-windows\ref\TestAttack.dll
 C:\Users\petch\source\repos\Lanna's_Defense\TestAttack\bin\Debug\net6.0-windows\Content\bullet3.xnb
 C:\Users\petch\source\repos\Lanna's_Defense\TestAttack\bin\Debug\net6.0-windows\Content\char1.xnb
+C:\Users\petch\source\repos\Lanna's_Defense\TestAttack\bin\Debug\net6.0-windows\Content\osu2.xnb

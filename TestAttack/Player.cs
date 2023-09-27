@@ -16,7 +16,10 @@ namespace TestBullet
         }
 
         public int speed = 3;
-
+        public override void Update(GameTime theTime)
+        {
+            base.Update(theTime);
+        }
         public void Move()
         {
             if (Keyboard.GetState().IsKeyDown(Keys.S))

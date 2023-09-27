@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using TestAttack;
 
 namespace TestBullet
 {
-    public class Sprite
+    public class Sprite : IEmu
     {
         public Texture2D _texture;
         public float Rotation;
@@ -29,7 +30,7 @@ namespace TestBullet
 
         public virtual void Shoot(Sprite followTarget) 
         {
-            FollowTarget = followTarget;
+           /* FollowTarget = followTarget;
             if (FollowTarget == null)
                 return;
 
@@ -45,7 +46,7 @@ namespace TestBullet
                 var velocity = Direction * t;
 
                 Position += velocity;
-            }
+            }*/
 
             
         }
@@ -55,7 +56,11 @@ namespace TestBullet
             spriteBatch.Draw(_texture, Position, Color.White);
         }
 
-       
+        public override void Update(GameTime theTime)
+        {
+            base.Update(theTime);
+        }
+
 
 
         /*public Sprite SetShootTarget(Sprite followTarget, float followDistance)

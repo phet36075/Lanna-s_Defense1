@@ -6,8 +6,10 @@
   <SourceFiles>
     <File>C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/bullet3.png</File>
     <File>C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/char1.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/osu2.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

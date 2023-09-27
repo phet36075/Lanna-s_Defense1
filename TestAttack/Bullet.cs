@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using SharpDX.Direct3D9;
 using System;
 
 
@@ -12,7 +11,9 @@ namespace TestBullet
         {
 
         }
-
+        public int timer = 60;
+        public bool Ishit;
+        public int Counter =0;
         public override void Shoot(Sprite followTarget)
         {
             FollowTarget = followTarget;
@@ -32,6 +33,36 @@ namespace TestBullet
 
                 Position += velocity;
             }
+            CollisionCheck();
+
+        }
+        public override void Update(GameTime theTime)
+        {
+            
+            Console.WriteLine(timer);
+            base.Update(theTime);
+        }
+        public void CollisionCheck()
+        {
+
+            Rectangle BulletRectangle = new Rectangle((int)this.Position.X, (int)this.Position.Y, 32, 48);
+            Rectangle PlayerRectangle = new Rectangle((int)FollowTarget.Position.X, (int)FollowTarget.Position.Y, 32, 48);
+            if (BulletRectangle.Intersects(PlayerRectangle))
+            {
+                Ishit = true;
+                
+                    if (Counter < 4)
+                    {
+                        Counter++;
+                        Console.WriteLine("Counter = " +Counter);
+                    }
+                    else
+                        Console.WriteLine("Counter = " + Counter);
+                 this.Position = new Vector2(0, 0);
+                Console.WriteLine(timer);
+
+            }
+
         }
 
         public override void Draw(SpriteBatch spriteBatch)

@@ -1,3 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/bullet3.png","C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/bin/Windows/Content/bullet3.xnb","TextureProcessor","Texture2DContent",699,10085,0.1028801
 "C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/char1.png","C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/bin/Windows/Content/char1.xnb","TextureProcessor","Texture2DContent",8542,40757,0.0030848
+"C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/osu2.png","C:/Users/petch/source/repos/Lanna's_Defense/TestAttack/Content/bin/Windows/Content/osu2.xnb","TextureProcessor","Texture2DContent",1697,9885,0.1142548
