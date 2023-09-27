@@ -13,7 +13,7 @@ namespace TestAttack
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        Player _player,_player2;
+        Player _player;
         Bullet _bullet;
         public bool Ishit;
         public List<Enemy> Enemies = new List<Enemy>(5);
