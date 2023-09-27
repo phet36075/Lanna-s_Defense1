@@ -27,8 +27,9 @@ namespace TestBullet
             _texture = texture;
         }
 
-        public void Follow() 
+        public virtual void Shoot(Sprite followTarget) 
         {
+            FollowTarget = followTarget;
             if (FollowTarget == null)
                 return;
 
@@ -57,13 +58,13 @@ namespace TestBullet
        
 
 
-        public Sprite SetFollowTarget(Sprite followTarget, float followDistance)
+        /*public Sprite SetShootTarget(Sprite followTarget, float followDistance)
         {
             FollowTarget = followTarget;
 
             FollowDistance = followDistance;
 
             return this;
-        }
+        }*/
     }
 }

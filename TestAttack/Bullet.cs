@@ -13,9 +13,25 @@ namespace TestBullet
 
         }
 
-        public void Shoot()
+        public override void Shoot(Sprite followTarget)
         {
+            FollowTarget = followTarget;
+            if (FollowTarget == null)
+                return;
 
+            var distance = FollowTarget.Position - this.Position;
+            Rotation = (float)Math.Atan2(distance.Y, distance.X);
+
+            Direction = new Vector2((float)Math.Cos(Rotation), (float)Math.Sin(Rotation));
+
+            var currentDistance = Vector2.Distance(this.Position, FollowTarget.Position);
+            if (currentDistance > FollowDistance)
+            {
+                var t = MathHelper.Min((float)Math.Abs(currentDistance - FollowDistance), LinearVelocity);
+                var velocity = Direction * t;
+
+                Position += velocity;
+            }
         }
 
         public override void Draw(SpriteBatch spriteBatch)
