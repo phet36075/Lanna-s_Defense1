@@ -273,7 +273,7 @@ namespace Lanna_s_Defense
                 Vector2 pos = position;
                 UpgradeCard shootUppgradeCard = new UpgradeCard(shootSpeedUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 55), 0f, new Vector2(32, 32));
                 UpgradeCard rangeUppgradeCard = new UpgradeCard(rangeUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 170), 0f, new Vector2(32, 32));
-                Turret turret = new Turret(position, enemyList, 275f, staticGt, 60, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
+                Turret turret = new Turret(position, enemyList, 125f, staticGt, 60, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
 
                 turretList.Add(turret);
             }
@@ -319,7 +319,7 @@ namespace Lanna_s_Defense
 
             foreach (Turret turret in turretList)
             {
-                DrawTexture(turretBaseTexture, turret.position, 0, new Vector2(32, 32), Vector2.One);
+                
                 DrawTexture(turret.basicTurretTexture, turret.position, turret.rotation, new Vector2(32, 32), Vector2.One);
 
                 if (turret.showUpgrades)

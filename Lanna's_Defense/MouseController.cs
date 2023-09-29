@@ -53,13 +53,13 @@ namespace Lanna_s_Defense
                 if(mousePosition.Y < 650){
                     if(_turretList.Count > 0){
                         if(_turretList[hoveringTurretIndex].shootUppgrade.hovering == true){
-                             if(_turretList[hoveringTurretIndex].damage < 2){
+                             //if(_turretList[hoveringTurretIndex].damage < 2){
                                 if(Game1.score >= 400){    
                                     _turretList[hoveringTurretIndex].damage++;
                                     Game1.score -= 400;
                                     Console.WriteLine("+1 damage");
                                 }
-                             }
+                             //}
                         }else if(_turretList[hoveringTurretIndex].rangeUppgrade.hovering == true){
                             if(Game1.score >= 400 && _turretList[hoveringTurretIndex].rangeTextureScale < 1.6f){   
                                 _turretList[hoveringTurretIndex].rangeTextureScale *= 1.25f;
@@ -130,7 +130,7 @@ namespace Lanna_s_Defense
             {
                 if(mousePos.X > _turretList[i].position.X - turretWidth/2 && mousePos.X < _turretList[i].position.X + turretWidth/2){
                     if(mousePos.Y > _turretList[i].position.Y - turretHeight/2 && mousePos.Y < _turretList[i].position.Y + turretHeight/2){
-                        hasBeenPressed = false;
+                        //hasBeenPressed = false;
                         _turretList[i].mouseIsHovering = true;
                         
                         
