@@ -1,16 +1,18 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Mac/OneDrive/Desktop/Assets - Lanna Defense/Map1.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Map1.xnb","TextureProcessor","Texture2DContent",45023,3686485,0.1987
+"C:/Users/Mac/OneDrive/Desktop/Assets - Lanna Defense/MoneyCounter.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/MoneyCounter.xnb","TextureProcessor","Texture2DContent",1118,42325,0.0023913
 "D:/Lanna-s_Defense1/Lanna's_Defense/Content/ball.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/ball.xnb","TextureProcessor","Texture2DContent",1525,13909,0.1368576
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/Base.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Base.xnb","TextureProcessor","Texture2DContent",53509,4000085,0.1044443
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurret.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/BasicTurret.xnb","TextureProcessor","Texture2DContent",1270,16469,0.0013764
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurretShoot.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/BasicTurretShoot.xnb","TextureProcessor","Texture2DContent",1417,16469,0.0014677
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/CardBasicturret.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/CardBasicturret.xnb","TextureProcessor","Texture2DContent",3484,613105,0.0136649
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/Base.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Base.xnb","TextureProcessor","Texture2DContent",1693,16469,0.1194782
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurret.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/BasicTurret.xnb","TextureProcessor","Texture2DContent",2358,16469,0.0206901
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurretShoot.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/BasicTurretShoot.xnb","TextureProcessor","Texture2DContent",3376,16469,0.0017213
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/CardBasicturret.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/CardBasicturret.xnb","TextureProcessor","Texture2DContent",40110,613105,0.0127555
 "D:/Lanna-s_Defense1/Lanna's_Defense/Content/Char01.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Char01.xnb","TextureProcessor","Texture2DContent",9405,98389,0.0034565
 "D:/Lanna-s_Defense1/Lanna's_Defense/Content/GameFont.spritefont","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/GameFont.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.1003883
 "D:/Lanna-s_Defense1/Lanna's_Defense/Content/lf farmer.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/lf farmer.xnb","TextureProcessor","Texture2DContent",997,6289,0.0010142
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Map1.xnb","TextureProcessor","Texture2DContent",45023,3686485,0.1895909
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/MoneyCounter.xnb","TextureProcessor","Texture2DContent",1118,42325,0.0032822
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/monsterHIt.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/monsterHIt.xnb","TextureProcessor","Texture2DContent",2894,16469,0.0012521
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/RangeTexture.xnb","TextureProcessor","Texture2DContent",12331,168185,0.0044583
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeUpgrade.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/RangeUpgrade.xnb","TextureProcessor","Texture2DContent",2132,89509,0.0049921
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Map1.xnb","TextureProcessor","Texture2DContent",45023,3686485,0.069412
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/MoneyCounter.xnb","TextureProcessor","Texture2DContent",1118,42325,0.0020642
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/monsterHIt.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/monsterHIt.xnb","TextureProcessor","Texture2DContent",2863,16469,0.0431848
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/RangeTexture.xnb","TextureProcessor","Texture2DContent",3750,168185,0.042825
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeUpgrade.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/RangeUpgrade.xnb","TextureProcessor","Texture2DContent",3050,89509,0.0426339
 "D:/Lanna-s_Defense1/Lanna's_Defense/Content/Rockman_walk.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Rockman_walk.xnb","TextureProcessor","Texture2DContent",23152,345685,0.0081037
-"D:/Lanna-s_Defense1/Lanna's_Defense/Content/ShootSpeedUpgrade.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/ShootSpeedUpgrade.xnb","TextureProcessor","Texture2DContent",1923,89509,0.0030419
+"D:/Lanna-s_Defense1/Lanna's_Defense/Content/ShootSpeedUpgrade.png","D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/ShootSpeedUpgrade.xnb","TextureProcessor","Texture2DContent",3560,89509,0.0700515

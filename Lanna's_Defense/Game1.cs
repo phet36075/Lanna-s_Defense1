@@ -17,19 +17,19 @@ namespace Lanna_s_Defense
 
         List<String> path2 = new List<string>() {"r0.5", "u7", "r5.6", "d7" ,"r1"};
         List<String> path2_heavy = new List<string>() { "r0.5", "u7", "r5.6", "d7", "r1" };
-        List<String> path2_fast = new List<string>() { "r0.5", "u7", "r5.6", "d7", "r1" };
+        List<String> path2_fast = new List<string>() { "r0.25", "u3.5", "r2.8", "d3.5", "r0.5" };
 
-        //List<String> path3 = new List<string>() { "" };
-        //List<String> path3_heavy = new List<string>() { "" };
-        //List<String> path3_fast = new List<string>() { "" };
+        List<String> path3 = new List<string>() { "r0.5", "d7", "r5.6", "u7" ,"r1" };
+        List<String> path3_heavy = new List<string>() { "r0.5", "d7", "r5.6", "u7" ,"r1" };
+        List<String> path3_fast = new List<string>() { "r0.25", "d3.5", "r2.8", "u3.5", "r0.5" };
 
-        //List<String> path4 = new List<string>() { "" };
-        //List<String> path4_heavy = new List<string>() { "" };
-        //List<String> path4_fast = new List<string>() { "" };
+        List<String> path4 = new List<string>() { "r0.5", "u7", "r12.2", "d7", "r1" };
+        List<String> path4_heavy = new List<string>() { "r0.5", "u7", "r12.2", "d7", "r1" };
+        List<String> path4_fast = new List<string>() { "r0.25", "u3.5", "r6.1", "d3.5", "r0.5" };
 
-        //List<String> path5 = new List<string>() { "" };
-        //List<String> path5_heavy = new List<string>() { "" };
-        //List<String> path5_fast = new List<string>() { "" };
+        List<String> path5 = new List<string>() { "r0.5", "d7", "r12.2", "u7", "r1" };
+        List<String> path5_heavy = new List<string>() { "r0.5", "d7", "r12.2", "u7", "r1" };
+        List<String> path5_fast = new List<string>() { "r0.25", "d3.5", "r6.1", "u3.5", "r0.5" };
 
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
@@ -265,7 +265,7 @@ namespace Lanna_s_Defense
             }
             else if (num >= 34 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path1_heavy, pos, 60f, gt, 300, monster2Idle, "heavy");
+                Enemy enemy = new Enemy(path1_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
@@ -283,7 +283,7 @@ namespace Lanna_s_Defense
             }
             else if (num >= 34 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path2_heavy, pos, 60f, gt, 300, monster2Idle, "heavy");
+                Enemy enemy = new Enemy(path2_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
@@ -293,7 +293,61 @@ namespace Lanna_s_Defense
                 enemyList.Add(enemy);
                 enemy.Start();
             }
-           
+            if (num >= 55 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path3, pos, 60f, gt, 35, monster1Idle, "normal");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else if (num >= 34 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path3_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else
+            {
+                Enemy enemy = new Enemy(path3_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            if (num >= 55 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path4, pos, 60f, gt, 35, monster1Idle, "normal");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else if (num >= 34 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path4_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else
+            {
+                Enemy enemy = new Enemy(path4_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            if (num >= 55 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path5, pos, 60f, gt, 35, monster1Idle, "normal");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else if (num >= 34 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path5_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else
+            {
+                Enemy enemy = new Enemy(path5_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+
         }
         int getRandomNum(){
             Random random = new Random();
@@ -353,8 +407,9 @@ namespace Lanna_s_Defense
 
             foreach (Turret turret in turretList)
             {
-                
+                DrawTexture(turretBaseTexture, turret.position, 0, new Vector2(32, 32), Vector2.One);
                 DrawTexture(turret.basicTurretTexture, turret.position, turret.rotation, new Vector2(32, 32), Vector2.One);
+
 
                 if (turret.showUpgrades)
                 {
