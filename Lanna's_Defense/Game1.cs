@@ -105,7 +105,7 @@ namespace Lanna_s_Defense
             rangeUpgrade = Content.Load<Texture2D>("RangeUpgrade");
 
             monster1Idle = Content.Load<Texture2D>("lf farmer");
-            monster2Idle = Content.Load<Texture2D>("Ball");
+            monster2Idle = Content.Load<Texture2D>("laoselephant");
             monster3Idle = Content.Load<Texture2D>("Rockman_walk");
             monsterHit = Content.Load<Texture2D>("monsterHit");
 
@@ -402,7 +402,7 @@ namespace Lanna_s_Defense
 
             foreach (Enemy enemy in enemyList)
             {
-                DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 64), Vector2.One);
+                DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 96), Vector2.One);
             }
 
             foreach (Turret turret in turretList)

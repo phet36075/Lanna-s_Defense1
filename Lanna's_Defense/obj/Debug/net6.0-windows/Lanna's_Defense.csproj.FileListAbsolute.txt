@@ -105,3 +105,4 @@ D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\refint\Lanna's_Defe
 D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.pdb
 D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.genruntimeconfig.cache
 D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\ref\Lanna's_Defense.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoselephant.xnb
