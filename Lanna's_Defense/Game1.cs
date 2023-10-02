@@ -11,9 +11,9 @@ namespace Lanna_s_Defense
 {
     public class Game1 : Game
     {
-        List<String> path1 = new List<string>() {"r3.45", "u3.7", "r7.2", "d7.3", "l3.6", "u1.4", "l2.25", "u4.5","r4.5", "d2.15", "l2.275", "s"};
-        List<String> path1_heavy = new List<string>() { "r3.45", "u3.7", "r7.2", "d7.3", "l3.6", "u1.4", "l2.25", "u4.5", "r4.5", "d2.15", "l2.275", "s" };
-        List<String> path1_fast = new List<string>() { "r3.45", "u3.7", "r7.2", "d7.3", "l3.6", "u1.4", "l2.25", "u4.5", "r4.5", "d2.15", "l2.275", "s" };
+        List<String> path1 = new List<string>() {"r3.45"};
+        List<String> path1_heavy = new List<string>() { "r3.45" };
+        List<String> path1_fast = new List<string>() { "r3.45" };
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
 
@@ -70,8 +70,8 @@ namespace Lanna_s_Defense
         protected override void Initialize()
         {
             base.Initialize();
-            _graphics.PreferredBackBufferWidth = 750;  
-            _graphics.PreferredBackBufferHeight = 750;   
+            _graphics.PreferredBackBufferWidth = 1280;  
+            _graphics.PreferredBackBufferHeight = 720;   
             _graphics.ApplyChanges();
         }
         protected override void LoadContent()
@@ -80,7 +80,7 @@ namespace Lanna_s_Defense
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("Gamefont");
-            background1Texture = Content.Load<Texture2D>("map4");
+            background1Texture = Content.Load<Texture2D>("Map1");
             //backgroundPath1Texture = Content.Load<Texture2D>("EnemyPath2");
             
             cardBasicTurret = Content.Load<Texture2D>("CardBasicturret");

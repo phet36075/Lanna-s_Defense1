@@ -62,9 +62,6 @@ D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Char01.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\GameFont.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\lf farmer.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map1.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map2.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map3.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map4.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\MoneyCounter.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\monsterHIt.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeTexture.xnb

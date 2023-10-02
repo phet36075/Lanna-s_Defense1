@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/RangeTexture.png</SourceFile>
+  <SourceFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png</SourceFile>
   <SourceTime>2023-09-17T09:42:43.729727+07:00</SourceTime>
-  <DestFile>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/bin/Windows/RangeTexture.xnb</DestFile>
-  <DestTime>2023-09-17T09:44:12.7637705+07:00</DestTime>
+  <DestFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/RangeTexture.xnb</DestFile>
+  <DestTime>2023-10-02T13:20:17.4786508+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

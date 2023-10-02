@@ -12,10 +12,7 @@
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Char01.png</File>
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/GameFont.spritefont</File>
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/lf farmer.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/map1.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/map2.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/map3.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/map4.png</File>
+    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png</File>
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png</File>
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/monsterHIt.png</File>
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png</File>
@@ -24,9 +21,6 @@
     <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/ShootSpeedUpgrade.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
