@@ -14,6 +14,23 @@ namespace Lanna_s_Defense
         List<String> path1 = new List<string>() {"r3.45"};
         List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
+
+        List<String> path2 = new List<string>() { "r3.45" };
+        List<String> path2_heavy = new List<string>() { "r3.45" };
+        List<String> path2_fast = new List<string>() { "r3.45" };
+
+        List<String> path3 = new List<string>() { "r3.45" };
+        List<String> path3_heavy = new List<string>() { "r3.45" };
+        List<String> path3_fast = new List<string>() { "r3.45" };
+
+        List<String> path4 = new List<string>() { "r3.45" };
+        List<String> path4_heavy = new List<string>() { "r3.45" };
+        List<String> path4_fast = new List<string>() { "r3.45" };
+
+        List<String> path5 = new List<string>() { "r3.45" };
+        List<String> path5_heavy = new List<string>() { "r3.45" };
+        List<String> path5_fast = new List<string>() { "r3.45" };
+
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
 
@@ -239,7 +256,7 @@ namespace Lanna_s_Defense
         }
         void AddEnemy()
         {
-            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2)+40);
+            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2)+500
             int num = getRandomNum();
             if(num >= 55 - higherMonsterChance){
                 Enemy enemy = new Enemy(path1, pos, 60f, gt, 35, monster1Idle, "normal");
@@ -258,7 +275,7 @@ namespace Lanna_s_Defense
                 enemyList.Add(enemy);
                 enemy.Start();
             }
-        
+            
         }
         int getRandomNum(){
             Random random = new Random();
@@ -314,7 +331,6 @@ namespace Lanna_s_Defense
             foreach (Enemy enemy in enemyList)
             {
                 DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 64), Vector2.One);
-                
             }
 
             foreach (Turret turret in turretList)
