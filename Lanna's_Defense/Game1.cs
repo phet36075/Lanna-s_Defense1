@@ -12,24 +12,24 @@ namespace Lanna_s_Defense
     public class Game1 : Game
     {
         List<String> path1 = new List<string>() { "r3.45" };
-        List<String> path1_heavy = new List<string>() { "r3.45" };
+        List<String> path1_heavy = new List<string>() { "u1","r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
 
         List<String> path2 = new List<string>() {"r0.5", "u7", "r5.2", "d7" ,"r1"};
-        List<String> path2_heavy = new List<string>() { "u8", "r5.6", "d6.5", "r1" };
-        List<String> path2_fast = new List<string>() { "r0.25", "u3.5", "r2.8", "d3.5", "r0.5" };
+        List<String> path2_heavy = new List<string>() { "u8", "r5", "d6.5", "r1" };
+        List<String> path2_fast = new List<string>() { "r0.25", "u3.5", "r2.4", "d3.5", "r0.5" };
 
         List<String> path3 = new List<string>() { "r0.5", "d7", "r5.2", "u7" ,"r1" };
-        List<String> path3_heavy = new List<string>() { "d7", "r5.6", "u7.5" ,"r1" };
-        List<String> path3_fast = new List<string>() { "r0.25", "d3.5", "r2.8", "u3.5", "r0.5" };
+        List<String> path3_heavy = new List<string>() { "d7", "r5", "u7.5" ,"r1" };
+        List<String> path3_fast = new List<string>() { "r0.25", "d3.5", "r2.4", "u3.5", "r0.5" };
 
-        List<String> path4 = new List<string>() { "r0.5", "u7", "r11.8", "d7", "r1" };
-        List<String> path4_heavy = new List<string>() {  "u8", "r12.2", "d6.5", "r1" };
-        List<String> path4_fast = new List<string>() { "r0.25", "u3.5", "r6.1", "d3.5", "r0.5" };
+        List<String> path4 = new List<string>() { "r0.5", "u7", "r12", "d7", "r1" };
+        List<String> path4_heavy = new List<string>() {  "u8", "r11.6", "d6.5", "r1" };
+        List<String> path4_fast = new List<string>() { "r0.25", "u3.5", "r5.8", "d3.5", "r0.5" };
 
-        List<String> path5 = new List<string>() { "r0.5", "d7", "r11.8", "u7", "r1" };
-        List<String> path5_heavy = new List<string>() { "d7", "r12.2", "u7.5", "r1" };
-        List<String> path5_fast = new List<string>() { "r0.25", "d3.5", "r6.1", "u3.5", "r0.5" };
+        List<String> path5 = new List<string>() { "r0.5", "d7", "r12", "u7", "r1" };
+        List<String> path5_heavy = new List<string>() { "d7", "r11.6", "u7.5", "r1" };
+        List<String> path5_fast = new List<string>() { "r0.25", "d3.5", "r5.8", "u3.5", "r0.5" };
 
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
@@ -377,7 +377,7 @@ namespace Lanna_s_Defense
                 Vector2 pos = position;
                 UpgradeCard shootUppgradeCard = new UpgradeCard(shootSpeedUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 55), 0f, new Vector2(32, 32));
                 UpgradeCard rangeUppgradeCard = new UpgradeCard(rangeUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 170), 0f, new Vector2(32, 32));
-                Turret turret = new Turret(position, enemyList, 125f, staticGt, 90, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
+                Turret turret = new Turret(position, enemyList, 125f, staticGt, 60, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
 
                 turretList.Add(turret);
             }
