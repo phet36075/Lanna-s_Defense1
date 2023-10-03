@@ -12,24 +12,24 @@ namespace Lanna_s_Defense
     public class Game1 : Game
     {
         List<String> path1 = new List<string>() { "r3.45" };
-        List<String> path1_heavy = new List<string>() { "u1","r3.45" };
+        List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
 
-        List<String> path2 = new List<string>() {"r0.5", "u7", "r5.2", "d7" ,"r1"};
-        List<String> path2_heavy = new List<string>() { "u8", "r5", "d6.5", "r1" };
-        List<String> path2_fast = new List<string>() { "r0.25", "u3.5", "r2.4", "d3.5", "r0.5" };
+        List<String> path2 = new List<string>() {"l0.5", "u7", "r6.2", "d7" ,"r1"};
+        List<String> path2_heavy = new List<string>() { "l1.5","u8", "r6.5", "d7", "r1" };
+        List<String> path2_fast = new List<string>() { "l1", "u3.5", "r3.6", "d3.5", "r0.5" };
 
-        List<String> path3 = new List<string>() { "r0.5", "d7", "r5.2", "u7" ,"r1" };
-        List<String> path3_heavy = new List<string>() { "d7", "r5", "u7.5" ,"r1" };
-        List<String> path3_fast = new List<string>() { "r0.25", "d3.5", "r2.4", "u3.5", "r0.5" };
+        List<String> path3 = new List<string>() { "l0.5", "d7", "r6.2", "u7" ,"r1" };
+        List<String> path3_heavy = new List<string>() { "l1.5","d7", "r6.5", "u8" ,"r1" };
+        List<String> path3_fast = new List<string>() { "l1", "d3.5", "r3.6", "u3.5", "r0.5" };
 
-        List<String> path4 = new List<string>() { "r0.5", "u7", "r12", "d7", "r1" };
-        List<String> path4_heavy = new List<string>() {  "u8", "r11.6", "d6.5", "r1" };
-        List<String> path4_fast = new List<string>() { "r0.25", "u3.5", "r5.8", "d3.5", "r0.5" };
+        List<String> path4 = new List<string>() { "l0.5", "u7", "r13", "d7", "r1" };
+        List<String> path4_heavy = new List<string>() { "l1.5", "u8", "r13.1", "d7", "r1" };
+        List<String> path4_fast = new List<string>() { "l1", "u3.5", "r7", "d3.5", "r0.5" };
 
-        List<String> path5 = new List<string>() { "r0.5", "d7", "r12", "u7", "r1" };
-        List<String> path5_heavy = new List<string>() { "d7", "r11.6", "u7.5", "r1" };
-        List<String> path5_fast = new List<string>() { "r0.25", "d3.5", "r5.8", "u3.5", "r0.5" };
+        List<String> path5 = new List<string>() { "l0.5", "d7", "r13", "u7", "r1" };
+        List<String> path5_heavy = new List<string>() { "l1.5","d7", "r13.1", "u8", "r1" };
+        List<String> path5_fast = new List<string>() { "l1", "d3.5", "r7", "u3.5", "r0.5" };
 
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
