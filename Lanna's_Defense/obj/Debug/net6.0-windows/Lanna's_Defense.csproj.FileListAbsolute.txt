@@ -53,20 +53,15 @@ C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-w
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeTexture.xnb
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeUpgrade.xnb
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ShootSpeedUpgrade.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ball.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Base.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\BasicTurret.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\BasicTurretShoot.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\CardBasicturret.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Char01.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\GameFont.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\lf farmer.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map1.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\MoneyCounter.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\monsterHIt.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeTexture.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeUpgrade.xnb
-D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Rockman_walk.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ShootSpeedUpgrade.xnb
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.exe
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.deps.json
@@ -106,3 +101,8 @@ D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.pdb
 D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.genruntimeconfig.cache
 D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\ref\Lanna's_Defense.dll
 D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoselephant.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoselephanthit.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoshorse.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoshorsehit.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laossoldier.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laossoldierhit.xnb

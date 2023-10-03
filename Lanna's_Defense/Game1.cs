@@ -15,20 +15,20 @@ namespace Lanna_s_Defense
         List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
 
-        List<String> path2 = new List<string>() {"r0.5", "u7", "r5.6", "d7" ,"r1"};
-        List<String> path2_heavy = new List<string>() {  "u7", "r5.6", "d6.5", "r1" };
+        List<String> path2 = new List<string>() {"r0.5", "u7", "r5.2", "d7" ,"r1"};
+        List<String> path2_heavy = new List<string>() { "u8", "r5.6", "d6.5", "r1" };
         List<String> path2_fast = new List<string>() { "r0.25", "u3.5", "r2.8", "d3.5", "r0.5" };
 
-        List<String> path3 = new List<string>() { "r0.5", "d7", "r5.6", "u7" ,"r1" };
-        List<String> path3_heavy = new List<string>() {  "d7", "r5.6", "u7.5" ,"r1" };
+        List<String> path3 = new List<string>() { "r0.5", "d7", "r5.2", "u7" ,"r1" };
+        List<String> path3_heavy = new List<string>() { "d7", "r5.6", "u7.5" ,"r1" };
         List<String> path3_fast = new List<string>() { "r0.25", "d3.5", "r2.8", "u3.5", "r0.5" };
 
-        List<String> path4 = new List<string>() { "r0.5", "u7", "r12.2", "d7", "r1" };
-        List<String> path4_heavy = new List<string>() {  "u7", "r12.2", "d6.5", "r1" };
+        List<String> path4 = new List<string>() { "r0.5", "u7", "r11.8", "d7", "r1" };
+        List<String> path4_heavy = new List<string>() {  "u8", "r12.2", "d6.5", "r1" };
         List<String> path4_fast = new List<string>() { "r0.25", "u3.5", "r6.1", "d3.5", "r0.5" };
 
-        List<String> path5 = new List<string>() { "r0.5", "d7", "r12.2", "u7", "r1" };
-        List<String> path5_heavy = new List<string>() {  "d7", "r12.2", "u7.5", "r1" };
+        List<String> path5 = new List<string>() { "r0.5", "d7", "r11.8", "u7", "r1" };
+        List<String> path5_heavy = new List<string>() { "d7", "r12.2", "u7.5", "r1" };
         List<String> path5_fast = new List<string>() { "r0.25", "d3.5", "r6.1", "u3.5", "r0.5" };
 
         static List<Enemy> enemyList = new List<Enemy>();
@@ -50,6 +50,8 @@ namespace Lanna_s_Defense
         static public Texture2D monster3Idle;
         static public Texture2D monster1Idle;
         static public Texture2D monsterHit;
+        static public Texture2D monsterHit2;
+        static public Texture2D monsterHit3;
 
         Texture2D turretBaseTexture;
         static Texture2D basicTurretIdle;
@@ -98,16 +100,18 @@ namespace Lanna_s_Defense
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("Gamefont");
             background1Texture = Content.Load<Texture2D>("Map1");
-            //backgroundPath1Texture = Content.Load<Texture2D>("EnemyPath2");
+            
             
             cardBasicTurret = Content.Load<Texture2D>("CardBasicturret");
             shootSpeedUpgrade = Content.Load<Texture2D>("ShootSpeedUpgrade");
             rangeUpgrade = Content.Load<Texture2D>("RangeUpgrade");
 
-            monster1Idle = Content.Load<Texture2D>("lf farmer");
-            monster2Idle = Content.Load<Texture2D>("laoselephant");
-            monster3Idle = Content.Load<Texture2D>("Rockman_walk");
-            monsterHit = Content.Load<Texture2D>("monsterHit");
+            monster1Idle = Content.Load<Texture2D>("Laossoldier");
+            monster2Idle = Content.Load<Texture2D>("Laoselephant");
+            monster3Idle = Content.Load<Texture2D>("Laoshorse");
+            monsterHit = Content.Load<Texture2D>("Laossoldierhit");
+            monsterHit2 = Content.Load<Texture2D>("Laoselephanthit");
+            monsterHit3 = Content.Load<Texture2D>("Laoshorsehit");
 
             turretBaseTexture = Content.Load<Texture2D>("Base");
             moneyCounterTexture = Content.Load<Texture2D>("MoneyCounter");
@@ -124,9 +128,20 @@ namespace Lanna_s_Defense
             this.IsMouseVisible = true;
         }
         public static Texture2D changeMonster1Texture(Texture2D current, string type){
-            if(current == monster1Idle || current == monster2Idle || current == monster3Idle){
+            if (current == monster1Idle)
+            {
                 return monsterHit;
-            }else{
+            }
+            if (current == monster2Idle)
+            {
+                return monsterHit2;
+            }
+            if (current == monster3Idle)
+            {
+                return monsterHit3;
+            }
+            else
+            {
                 switch (type)
                 {
                     case "normal":
@@ -362,7 +377,7 @@ namespace Lanna_s_Defense
                 Vector2 pos = position;
                 UpgradeCard shootUppgradeCard = new UpgradeCard(shootSpeedUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 55), 0f, new Vector2(32, 32));
                 UpgradeCard rangeUppgradeCard = new UpgradeCard(rangeUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 170), 0f, new Vector2(32, 32));
-                Turret turret = new Turret(position, enemyList, 125f, staticGt, 60, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
+                Turret turret = new Turret(position, enemyList, 125f, staticGt, 90, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
 
                 turretList.Add(turret);
             }
@@ -402,7 +417,7 @@ namespace Lanna_s_Defense
 
             foreach (Enemy enemy in enemyList)
             {
-                DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 64), Vector2.One);
+                DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 80), Vector2.One);
             }
 
             foreach (Turret turret in turretList)
