@@ -402,8 +402,8 @@ namespace Lanna_s_Defense
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             DrawTexture(background1Texture, new Vector2(32, 32), 0, new Vector2(32, 32), Vector2.One);
-            DrawTexture(moneyCounterTexture, new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height / 2), 0, new Vector2(32, 32), Vector2.One);
-            DrawText(font, new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height + 25), score.ToString());
+            DrawTexture(moneyCounterTexture, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height / 2), 0, new Vector2(32, 32), Vector2.One);
+            DrawText(font, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height + 25), score.ToString());
             DrawText(font, new Vector2(_graphics.PreferredBackBufferWidth / 2, 10), playerHealth.ToString());
 
             if (playerHealth <= 0)
