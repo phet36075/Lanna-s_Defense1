@@ -11,8 +11,6 @@ namespace Lanna_s_Defense
     internal class Enemy
     {
         public Texture2D monsterTexture { get; set; }
-       
-
         public List<String> instructions = new List<string>();
         public Instructor instruction1;
         public double GameT;
@@ -60,7 +58,6 @@ namespace Lanna_s_Defense
         {
             Health -= dmg;
             monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
-           
         }
         public void changeDir()
         {

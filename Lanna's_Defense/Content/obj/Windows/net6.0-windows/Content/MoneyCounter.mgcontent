@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-<<<<<<< HEAD
   <SourceFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/MoneyCounter.png</SourceFile>
   <SourceTime>2023-10-01T01:39:48.2660948+07:00</SourceTime>
   <DestFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/bin/Windows/Content/MoneyCounter.xnb</DestFile>
   <DestTime>2023-10-01T01:58:42.4591378+07:00</DestTime>
-=======
-  <SourceFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png</SourceFile>
-  <SourceTime>2023-09-16T20:34:18.6032357+07:00</SourceTime>
-  <DestFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/MoneyCounter.xnb</DestFile>
-  <DestTime>2023-10-13T18:27:54.4366341+07:00</DestTime>
->>>>>>> 11875d09391e4ecc53a77c9e87acd6adae44795d
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
