@@ -4,24 +4,24 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/ball.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/Base.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/BasicTurret.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/BasicTurretShoot.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/CardBasicturret.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/Char01.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/GameFont.spritefont</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/lf farmer.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/map1.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/map2.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/map3.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/map4.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/MoneyCounter.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/monsterHIt.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/RangeTexture.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/RangeUpgrade.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/Rockman_walk.png</File>
-    <File>C:/Users/Mac/OneDrive/Desktop/Lanna's Defense/Lanna's_Defense/Content/ShootSpeedUpgrade.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/ball.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Base.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/BasicTurret.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/BasicTurretShoot.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/CardBasicturret.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Char01.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/GameFont.spritefont</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/lf farmer.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/map1.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/map2.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/map3.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/map4.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/MoneyCounter.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/monsterHIt.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/RangeTexture.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/RangeUpgrade.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Rockman_walk.png</File>
+    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/ShootSpeedUpgrade.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
