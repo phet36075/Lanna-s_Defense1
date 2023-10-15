@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<<<<<<< HEAD
   <SourceFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/map1.png</SourceFile>
   <SourceTime>2023-10-01T01:39:48.3528775+07:00</SourceTime>
   <DestFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/bin/Windows/Content/map1.xnb</DestFile>
   <DestTime>2023-10-01T01:58:42.2901271+07:00</DestTime>
+=======
+  <SourceFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png</SourceFile>
+  <SourceTime>2023-10-02T13:14:36.0060306+07:00</SourceTime>
+  <DestFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Map1.xnb</DestFile>
+  <DestTime>2023-10-13T18:27:54.4346386+07:00</DestTime>
+>>>>>>> 11875d09391e4ecc53a77c9e87acd6adae44795d
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

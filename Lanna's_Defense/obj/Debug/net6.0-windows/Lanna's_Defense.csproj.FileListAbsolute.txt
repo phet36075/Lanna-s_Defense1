@@ -53,6 +53,7 @@ C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-w
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeTexture.xnb
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeUpgrade.xnb
 C:\Users\Mac\OneDrive\Desktop\Lanna's Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ShootSpeedUpgrade.xnb
+<<<<<<< HEAD
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ball.xnb
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Base.xnb
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\bin\Debug\net6.0-windows\Content\BasicTurret.xnb
@@ -108,3 +109,58 @@ C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\obj\Debug\net6.0-win
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.pdb
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.genruntimeconfig.cache
 C:\Users\petch\source\repos\Lanna's_Defense\Lanna's_Defense\obj\Debug\net6.0-windows\ref\Lanna's_Defense.dll
+=======
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Base.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\BasicTurret.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\BasicTurretShoot.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\CardBasicturret.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\GameFont.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\map1.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\MoneyCounter.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeTexture.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\RangeUpgrade.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\ShootSpeedUpgrade.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.exe
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.deps.json
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.runtimeconfig.json
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Lanna's_Defense.pdb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.CSharp.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\MonoGame.Framework.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.Direct2D1.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.Direct3D11.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.Direct3D9.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.DXGI.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.Mathematics.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.MediaFoundation.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.XAudio2.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\SharpDX.XInput.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\debian-x64\native\libuv.so
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\fedora-x64\native\libuv.so
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\opensuse-x64\native\libuv.so
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\osx\native\libuv.dylib
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\rhel-x64\native\libuv.so
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\win7-arm\native\libuv.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\win7-x64\native\libuv.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\runtimes\win7-x86\native\libuv.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.csproj.AssemblyReference.cache
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.GeneratedMSBuildEditorConfig.editorconfig
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.AssemblyInfoInputs.cache
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.AssemblyInfo.cs
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.csproj.CoreCompileInputs.cache
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.csproj.CopyComplete
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\refint\Lanna's_Defense.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.pdb
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\Lanna's_Defense.genruntimeconfig.cache
+D:\Lanna-s_Defense1\Lanna's_Defense\obj\Debug\net6.0-windows\ref\Lanna's_Defense.dll
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoselephant.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoselephanthit.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoshorse.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laoshorsehit.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laossoldier.xnb
+D:\Lanna-s_Defense1\Lanna's_Defense\bin\Debug\net6.0-windows\Content\Laossoldierhit.xnb
+>>>>>>> 11875d09391e4ecc53a77c9e87acd6adae44795d

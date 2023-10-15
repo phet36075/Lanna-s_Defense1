@@ -148,15 +148,15 @@ namespace Lanna_s_Defense
             }
             if(closestEnemy != null){
 
-               Console.WriteLine(closestEnemy.Position);    
+               //Console.WriteLine(closestEnemy.Position);    
             }
         }
 
         void ShootEnemy(){
-             if(closestEnemy != null){
-                Console.WriteLine("Shooting at " + closestEnemy.Position);
-                closestEnemy.TakeDamage(1);
-            }
+             //if(closestEnemy != null){
+                //Console.WriteLine("Shooting at " + closestEnemy.Position);
+               //closestEnemy.TakeDamage(1);
+            //}
             if(farthestEnemy != null){
                 farthestEnemy.TakeDamage(damage);
                 if(farthestEnemy.Health <= 0){
