@@ -15,12 +15,12 @@ namespace Lanna_s_Defense
         List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
 
-        List<String> path2 = new List<string>() {"l0.5", "u7", "r6.2", "d7" ,"r1"};
-        List<String> path2_heavy = new List<string>() { "l1.5","u8", "r6.5", "d7", "r1" };
+        List<String> path2 = new List<string>() { "l0.5", "u7", "r6.2", "d7", "r1" };
+        List<String> path2_heavy = new List<string>() { "l1.5", "u8", "r6.5", "d7", "r1" };
         List<String> path2_fast = new List<string>() { "l1", "u3.5", "r3.6", "d3.5", "r0.5" };
 
-        List<String> path3 = new List<string>() { "l0.5", "d7", "r6.2", "u7" ,"r1" };
-        List<String> path3_heavy = new List<string>() { "l1.5","d7", "r6.5", "u8" ,"r1" };
+        List<String> path3 = new List<string>() { "l0.5", "d7", "r6.2", "u7", "r1" };
+        List<String> path3_heavy = new List<string>() { "l1.5", "d7", "r6.5", "u8", "r1" };
         List<String> path3_fast = new List<string>() { "l1", "d3.5", "r3.6", "u3.5", "r0.5" };
 
         List<String> path4 = new List<string>() { "l0.5", "u7", "r13", "d7", "r1" };
@@ -28,7 +28,7 @@ namespace Lanna_s_Defense
         List<String> path4_fast = new List<string>() { "l1", "u3.5", "r7", "d3.5", "r0.5" };
 
         List<String> path5 = new List<string>() { "l0.5", "d7", "r13", "u7", "r1" };
-        List<String> path5_heavy = new List<string>() { "l1.5","d7", "r13.1", "u8", "r1" };
+        List<String> path5_heavy = new List<string>() { "l1.5", "d7", "r13.1", "u8", "r1" };
         List<String> path5_fast = new List<string>() { "l1", "d3.5", "r7", "u3.5", "r0.5" };
 
         static List<Enemy> enemyList = new List<Enemy>();
@@ -44,7 +44,7 @@ namespace Lanna_s_Defense
         public static int score = 2000;
         Texture2D backgroundPath1Texture;
         Texture2D background1Texture;
-        
+
         // Texture2D monster1Texture;
         static public Texture2D monster2Idle;
         static public Texture2D monster3Idle;
@@ -77,6 +77,16 @@ namespace Lanna_s_Defense
         int spawnRate = 1500;
         int higherMonsterChance = 55;
         double tempe;
+
+        Texture2D menuTexture;
+        Texture2D gameplayTexture;
+        ScreenState mCurrentScreen;
+        enum ScreenState
+        {
+            Title,
+            Gameplay,
+
+        }
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -84,24 +94,25 @@ namespace Lanna_s_Defense
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
-            
+
         }
         protected override void Initialize()
         {
             base.Initialize();
-            _graphics.PreferredBackBufferWidth = 1280;  
-            _graphics.PreferredBackBufferHeight = 720;   
+            _graphics.PreferredBackBufferWidth = 1280;
+            _graphics.PreferredBackBufferHeight = 720;
             _graphics.ApplyChanges();
         }
         protected override void LoadContent()
         {
-            
+
 
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            mCurrentScreen = ScreenState.Title;
             font = Content.Load<SpriteFont>("Gamefont");
             background1Texture = Content.Load<Texture2D>("Map1");
-            
-            
+
+
             cardBasicTurret = Content.Load<Texture2D>("CardBasicturret");
             shootSpeedUpgrade = Content.Load<Texture2D>("ShootSpeedUpgrade");
             rangeUpgrade = Content.Load<Texture2D>("RangeUpgrade");
@@ -119,7 +130,7 @@ namespace Lanna_s_Defense
 
             basicTurretIdle = Content.Load<Texture2D>("BasicTurret");
             basicTurretShoot = Content.Load<Texture2D>("BasicTurretShoot");
-            
+
             whiteRectangle = new Texture2D(GraphicsDevice, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
 
@@ -127,7 +138,8 @@ namespace Lanna_s_Defense
 
             this.IsMouseVisible = true;
         }
-        public static Texture2D changeMonster1Texture(Texture2D current, string type){
+        public static Texture2D changeMonster1Texture(Texture2D current, string type)
+        {
             if (current == monster1Idle)
             {
                 return monsterHit;
@@ -146,14 +158,14 @@ namespace Lanna_s_Defense
                 {
                     case "normal":
                         return monster1Idle;
-                    case "heavy": 
+                    case "heavy":
                         return monster2Idle;
                     case "fast":
                         return monster3Idle;
                     default:
                         return monster1Idle;
                 }
-                
+
             }
         }
         public static Texture2D changeTurretTexture(Texture2D current, int e)
@@ -174,32 +186,41 @@ namespace Lanna_s_Defense
         }
 
 
-        void WaveManager(){
+        void WaveManager()
+        {
             if (gt > timeSinceLast + spawnRate)
             {
-                if(enemyList.Count + enemiesKilled < spawnAmount){
+                if (enemyList.Count + enemiesKilled < spawnAmount)
+                {
                     AddEnemy();
                     timeSinceLast = gt;
-                }else{
+                }
+                else
+                {
                     NextWave();
                 }
             }
         }
-        void NextWave(){
+        void NextWave()
+        {
             if (enemiesKilled == spawnAmount)
             {
                 Console.WriteLine("Next Wave!");
                 spawnAmount += 10;
-                if(higherMonsterChance != -40){
+                if (higherMonsterChance != -40)
+                {
                     higherMonsterChance -= 20;
                 }
                 enemiesKilled = 0;
-                if(spawnRate >= 1000){
+                if (spawnRate >= 1000)
+                {
                     spawnRate -= 500;
                 }
                 timeSinceLast = gt;
             }
         }
+
+
 
         protected override void Update(GameTime gameTime)
         {
@@ -207,16 +228,29 @@ namespace Lanna_s_Defense
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            mouseController.MouseUpdate();
+           
 
-            mouseController.gt = gt;
+            switch (mCurrentScreen)
+            {
+                case ScreenState.Title:
+                    {
+                        UpdateTitle(); break;
+                    }
+                case ScreenState.Gameplay:
+                    {
+                        UpdateGameplay();
+                        mouseController.MouseUpdate();
 
+                        mouseController.gt = gt;
+                        WaveManager();
 
-            WaveManager();
+                        gt = gameTime.TotalGameTime.TotalMilliseconds;
+                        staticGt = gt; break;
 
-            gt = gameTime.TotalGameTime.TotalMilliseconds;
-            staticGt = gt;
-            
+                    }
+            }
+           
+
             if (enemyList.Count > 0)
             {
                 foreach (Enemy enemy in enemyList)
@@ -230,7 +264,7 @@ namespace Lanna_s_Defense
 
                     enemy.Position = new Vector2(enemyX, enemyY);
 
-                    
+
                 }
                 for (int i = 0; i < enemyList.Count; i++)
                 {
@@ -271,9 +305,10 @@ namespace Lanna_s_Defense
         }
         void AddEnemy()
         {
-            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2)+40);
+            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2) + 40);
             int num = getRandomNum();
-            if(num >= 55 - higherMonsterChance){
+            if (num >= 55 - higherMonsterChance)
+            {
                 Enemy enemy = new Enemy(path1, pos, 60f, gt, 35, monster1Idle, "normal");
                 enemyList.Add(enemy);
                 enemy.Start();
@@ -364,7 +399,8 @@ namespace Lanna_s_Defense
             }
 
         }
-        int getRandomNum(){
+        int getRandomNum()
+        {
             Random random = new Random();
             int num = random.Next(1, 100);
             return num;
@@ -391,16 +427,85 @@ namespace Lanna_s_Defense
 
 
 
-        void EnemyDie(int index){
+        void EnemyDie(int index)
+        {
             enemiesKilled++;
             score += 50;
             enemyList.RemoveAt(index);
         }
-        
+
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
+
+            switch (mCurrentScreen)
+            {
+                case ScreenState.Title:
+                    {
+                        DrawMenu(); break;
+                    }
+                case ScreenState.Gameplay:
+                    {
+
+                        DrawGameplay(); break;
+                    }
+            }
+            base.Draw(gameTime);
+        }
+
+        void DrawTexture(Texture2D texture, Vector2 position, float rotation, Vector2 offset, Vector2 scale)
+        {
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(
+                texture,
+                position,
+                null,
+                Color.White,
+                rotation,
+                offset,
+                scale,
+                SpriteEffects.None,
+                0f
+            );
+
+
+            _spriteBatch.End();
+        }
+        void DrawShape()
+        {
+            _spriteBatch.Begin();
+
+            _spriteBatch.Draw(
+                whiteRectangle,
+                new Vector2(20f, 20f),
+                null,
+                Color.Chocolate,
+                0f,
+                Vector2.Zero,
+                new Vector2(80f, 80f),
+                SpriteEffects.None, 0f
+            );
+            _spriteBatch.End();
+        }
+        void DrawText(SpriteFont spriteFont, Vector2 position, String content)
+        {
+            _spriteBatch.Begin();
+            _spriteBatch.DrawString(
+                font,
+                content,
+                position,
+                Color.Black
+            );
+            _spriteBatch.End();
+        }
+
+        private void DrawMenu()
+        {
+           
+        }
+        private void DrawGameplay()
+        {
             DrawTexture(background1Texture, new Vector2(32, 32), 0, new Vector2(32, 32), Vector2.One);
             DrawTexture(moneyCounterTexture, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height / 2), 0, new Vector2(32, 32), Vector2.One);
             DrawText(font, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height + 25), score.ToString());
@@ -435,52 +540,23 @@ namespace Lanna_s_Defense
                     // Console.WriteLine(turret.rangeTextureScale);
                 }
             }
-
-            base.Draw(gameTime);
         }
 
-        void DrawTexture(Texture2D texture, Vector2 position, float rotation, Vector2 offset, Vector2 scale)
+        private void UpdateGameplay()
         {
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(
-                texture,
-                position,
-                null,
-                Color.White,
-                rotation,
-                offset,
-                scale,
-                SpriteEffects.None,
-                0f
-            );
-            _spriteBatch.End();
-        }
-        void DrawShape()
-        {
-            _spriteBatch.Begin();
+            if (Keyboard.GetState().IsKeyDown(Keys.A) == true)
+            {
+                mCurrentScreen = ScreenState.Title;
+            }
 
-            _spriteBatch.Draw(
-                whiteRectangle,
-                new Vector2(20f, 20f),
-                null,
-                Color.Chocolate,
-                0f,
-                Vector2.Zero,
-                new Vector2(80f, 80f),
-                SpriteEffects.None, 0f
-            );
-            _spriteBatch.End();
         }
-        void DrawText(SpriteFont spriteFont, Vector2 position, String content)
+        private void UpdateTitle()
         {
-            _spriteBatch.Begin();
-            _spriteBatch.DrawString(
-                font,
-                content,
-                position,
-                Color.Black
-            );
-            _spriteBatch.End();
+            if (Keyboard.GetState().IsKeyDown(Keys.B) == true)
+            {
+                mCurrentScreen = ScreenState.Gameplay;
+            }
+
         }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/CardBasicturret.png</SourceFile>
-  <SourceTime>2023-10-02T20:26:24.6518875+07:00</SourceTime>
-  <DestFile>D:/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/CardBasicturret.xnb</DestFile>
-  <DestTime>2023-10-13T18:24:58.9480619+07:00</DestTime>
+  <SourceFile>C:/Users/petch/source/repos/Lanna-s_Defense3/Lanna's_Defense/Content/CardBasicturret.png</SourceFile>
+  <SourceTime>2023-10-16T19:09:08.7744485+07:00</SourceTime>
+  <DestFile>C:/Users/petch/source/repos/Lanna-s_Defense3/Lanna's_Defense/Content/bin/Windows/CardBasicturret.xnb</DestFile>
+  <DestTime>2023-10-16T19:15:03.3585946+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
