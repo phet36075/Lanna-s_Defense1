@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin ../../../../../Downloads/Map1.png
+#begin ../../../Assets - Lanna Defense/Map1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,9 +23,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/Map1.png;Map1.png
+/build:../../../Assets - Lanna Defense/Map1.png;Map1.png
 
-#begin ../../../../../Downloads/MoneyCounter.png
+#begin ../../../Assets - Lanna Defense/MoneyCounter.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,7 +35,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:../../../../../Downloads/MoneyCounter.png;MoneyCounter.png
+/build:../../../Assets - Lanna Defense/MoneyCounter.png;MoneyCounter.png
 
 #begin Base.png
 /importer:TextureImporter
