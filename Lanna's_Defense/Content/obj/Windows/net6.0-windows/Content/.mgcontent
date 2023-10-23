@@ -4,24 +4,24 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/../../../Assets - Lanna Defense/Map1.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/../../../Assets - Lanna Defense/MoneyCounter.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Base.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurret.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurretShoot.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/CardBasicturret.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/GameFont.spritefont</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laoselephant.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laoselephanthit.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laoshorse.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laoshorsehit.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laossoldier.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Laossoldierhit.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/RangeUpgrade.png</File>
-    <File>D:/Lanna-s_Defense1/Lanna's_Defense/Content/ShootSpeedUpgrade.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/../../../Assets - Lanna Defense/Map1.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/../../../Assets - Lanna Defense/MoneyCounter.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Base.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurret.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/BasicTurretShoot.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/CardBasicturret.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/GameFont.spritefont</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laoselephant.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laoselephanthit.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laoshorse.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laoshorsehit.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laossoldier.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Laossoldierhit.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Map1.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/MoneyCounter.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/RangeTexture.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/RangeUpgrade.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/ShootSpeedUpgrade.png</File>
   </SourceFiles>
   <DestFiles>
     <File>Map1.png</File>
