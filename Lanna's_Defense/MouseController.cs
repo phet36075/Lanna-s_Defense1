@@ -5,6 +5,10 @@ using System.Threading.Tasks;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
 
 namespace Lanna_s_Defense
 {
@@ -50,14 +54,14 @@ namespace Lanna_s_Defense
                     CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].shootUppgrade);
                     CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].rangeUppgrade);
                 }
-                if(mousePosition.Y < 650){
+                if(mousePosition.Y < 720){
                     if(_turretList.Count > 0){
                         if(_turretList[hoveringTurretIndex].shootUppgrade.hovering == true){
                              //if(_turretList[hoveringTurretIndex].damage < 2){
                                 if(Game1.score >= 400){    
                                     _turretList[hoveringTurretIndex].damage++;
                                     Game1.score -= 400;
-                                    Console.WriteLine("+1 damage");
+                                    Console.WriteLine("Aro +1 damage");
                                 }
                              //}
                         }else if(_turretList[hoveringTurretIndex].rangeUppgrade.hovering == true){
@@ -70,7 +74,7 @@ namespace Lanna_s_Defense
                             }
                         }
                         else if(_turretList[hoveringTurretIndex].mouseIsHovering && _turretList[hoveringTurretIndex].showUpgrades == false){
-                            Console.WriteLine("selecting");
+                            Console.WriteLine("Selecting Aro");
                             
                             _turretList[hoveringTurretIndex].showUpgrades = true;
                         }
@@ -96,7 +100,8 @@ namespace Lanna_s_Defense
             {
                 if(!hasBeenPressed){
                     hasBeenPressed = true;
-                    if(_turretList[hoveringTurretIndex].mouseIsHovering == true){
+                    if(_turretList[hoveringTurretIndex].mouseIsHovering == true)
+                    {
                         _turretList[hoveringTurretIndex].beenPressed = true;
                         Game1.DeleteTurret(hoveringTurretIndex);
                     }

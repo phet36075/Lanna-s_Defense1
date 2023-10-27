@@ -5,12 +5,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
 
 namespace Lanna_s_Defense
 {
     internal class Enemy
     {
-        public Texture2D monsterTexture { get; set; }
+        public AnimatedSprite monsterTexture { get; set; }
        
 
         public List<String> instructions = new List<string>();
@@ -22,12 +26,13 @@ namespace Lanna_s_Defense
         public int DirX { get; set; }
         public int DirY { get; set; }
         public Vector2 Dir;
+        
 
         public string type { get; set; }
         private double timeSinceLast = 0;
         private double gt;
 
-        public Enemy(List<String> instructions, Vector2 position, float speed, double gameT, int Health, Texture2D monsterTexture, string type)
+        public Enemy(List<String> instructions, Vector2 position, float speed, double gameT, int Health, AnimatedSprite monsterTexture, string type)
         {
             this.instructions = instructions;
             this.Position = position;
@@ -47,17 +52,27 @@ namespace Lanna_s_Defense
         {
             if (GameT > timeSinceLast + 300)
             {
-                if (monsterTexture == Game1.monsterHit)
+                if (monsterTexture == Game1.soldierHit)
+                {
+                    monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
+                }
+                if (monsterTexture == Game1.horseHit)
+                {
+                    monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
+                }
+                if (monsterTexture == Game1.elephantHit)
                 {
                     monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
                 }
 
                 timeSinceLast = GameT;
             }
+
         }
 
         public void TakeDamage(int dmg)
         {
+            dmg = 1;
             Health -= dmg;
             monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
            
@@ -71,5 +86,6 @@ namespace Lanna_s_Defense
             Dir = new Vector2(DirX, DirY);
             instruction1.CreateInstructions(GameT);
         }
+        
     }
 }

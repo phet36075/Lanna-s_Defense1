@@ -1,11 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 using System;
 // using System.Formats.Asn1;
 using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
 using System.Collections.Generic;
+using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
+using SharpDX.DirectWrite;
+
 
 namespace Lanna_s_Defense
 {
@@ -15,30 +23,29 @@ namespace Lanna_s_Defense
         List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
 
-        List<String> path2 = new List<string>() { "l0.5", "u7", "r6.2", "d7", "r1" };
-        List<String> path2_heavy = new List<string>() { "l1.5", "u8", "r6.5", "d7", "r1" };
-        List<String> path2_fast = new List<string>() { "l1", "u3.5", "r3.6", "d3.5", "r0.5" };
+        List<String> path2 = new List<string>() { "l0.5", "u3.5", "r3.2", "d3.5", "r0.5" }; 
+        List<String> path2_fast = new List<string>() { "l0.5", "u1.75", "r1.9", "d1.75", "r0.25" };
 
-        List<String> path3 = new List<string>() { "l0.5", "d7", "r6.2", "u7", "r1" };
-        List<String> path3_heavy = new List<string>() { "l1.5", "d7", "r6.5", "u8", "r1" };
-        List<String> path3_fast = new List<string>() { "l1", "d3.5", "r3.6", "u3.5", "r0.5" };
+        List<String> path3 = new List<string>() { "l0.5", "d3.75", "r3", "u3.7", "r0.5" }; 
+        List<String> path3_fast = new List<string>() { "l0.5", "d2", "r1.8", "u2", "r0.25" };
 
-        List<String> path4 = new List<string>() { "l0.5", "u7", "r13", "d7", "r1" };
-        List<String> path4_heavy = new List<string>() { "l1.5", "u8", "r13.1", "d7", "r1" };
-        List<String> path4_fast = new List<string>() { "l1", "u3.5", "r7", "d3.5", "r0.5" };
+        List<String> path4 = new List<string>() { "l0.5", "u3.5", "r5.5", "d3.5", "r0.5" }; 
+        List<String> path4_fast = new List<string>() { "l0.5", "u1.75", "r3.25", "d1.75", "r0.25" };
 
-        List<String> path5 = new List<string>() { "l0.5", "d7", "r13", "u7", "r1" };
-        List<String> path5_heavy = new List<string>() { "l1.5", "d7", "r13.1", "u8", "r1" };
-        List<String> path5_fast = new List<string>() { "l1", "d3.5", "r7", "u3.5", "r0.5" };
+        List<String> path5 = new List<string>() { "l0.5", "d3.5", "r5.2", "u3.5", "r0.5" };
+        List<String> path5_fast = new List<string>() { "l0.5", "d1.75", "r3.15", "u1.75", "r0.25" };
 
         static List<Enemy> enemyList = new List<Enemy>();
         static List<Turret> turretList = new List<Turret>();
 
+        Song main, ingame;
 
         double gt = 0;
         static double staticGt = 0;
         double timeSinceLast = 0;
         int enemiesKilled = 0;
+        public int dx = 0;
+        public int dy = 0;
 
         private SpriteFont font;
         public static int score = 2000;
@@ -46,12 +53,22 @@ namespace Lanna_s_Defense
         Texture2D background1Texture;
 
         // Texture2D monster1Texture;
-        static public Texture2D monster2Idle;
-        static public Texture2D monster3Idle;
-        static public Texture2D monster1Idle;
-        static public Texture2D monsterHit;
-        static public Texture2D monsterHit2;
-        static public Texture2D monsterHit3;
+        static public SpriteSheet soldierSheet;
+        static public SpriteSheet horseSheet;
+        static public SpriteSheet elephantSheet;
+
+        static public AnimatedSprite soldier;
+        static public AnimatedSprite horse;
+        static public AnimatedSprite elephant;
+
+        static public SpriteSheet soldierSheetHit;
+        static public SpriteSheet horseSheetHit;
+        static public SpriteSheet elephantSheetHit;
+
+        static public AnimatedSprite soldierHit;
+        static public AnimatedSprite horseHit;
+        static public AnimatedSprite elephantHit;
+
 
         Texture2D turretBaseTexture;
         static Texture2D basicTurretIdle;
@@ -72,11 +89,13 @@ namespace Lanna_s_Defense
 
         Texture2D whiteRectangle;
 
+
         int playerHealth = 5;
         int spawnAmount = 10;
         int spawnRate = 1500;
         int higherMonsterChance = 55;
         double tempe;
+        
 
         Texture2D menuTexture;
         Texture2D gameplayTexture;
@@ -90,12 +109,12 @@ namespace Lanna_s_Defense
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
+            
             static_graphics = _graphics;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
-
-
         }
+        
         protected override void Initialize()
         {
             base.Initialize();
@@ -110,26 +129,40 @@ namespace Lanna_s_Defense
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             mCurrentScreen = ScreenState.Title;
             font = Content.Load<SpriteFont>("Gamefont");
-            background1Texture = Content.Load<Texture2D>("Map1");
+            background1Texture = Content.Load<Texture2D>("Map/Map1");
+
+            this.main = Content.Load<Song>("Sound/maintheme");
+            this.ingame = Content.Load<Song>("Sound/ingametheme");
+            MediaPlayer.Play(main);
+            MediaPlayer.IsRepeating = true;
+
+            cardBasicTurret = Content.Load<Texture2D>("UI/CardBasicturret");
+            shootSpeedUpgrade = Content.Load<Texture2D>("UI/ShootSpeedUpgrade");
+            rangeUpgrade = Content.Load<Texture2D>("UI/RangeUpgrade");
+
+            SpriteSheet soldierSheet = Content.Load<SpriteSheet>("Enemies/myanmarsoldieranimation.sf", new JsonContentLoader());
+            SpriteSheet horseSheet = Content.Load<SpriteSheet>("Enemies/myanmarhorseanimation.sf", new JsonContentLoader());
+            SpriteSheet elephantSheet = Content.Load<SpriteSheet>("Enemies/myanmarelephantanimation.sf", new JsonContentLoader());
+
+            soldier = new AnimatedSprite(soldierSheet);
+            horse = new AnimatedSprite(horseSheet);
+            elephant = new AnimatedSprite(elephantSheet);
+
+            SpriteSheet soldierSheetHit = Content.Load<SpriteSheet>("Enemies/myanmarsoldieranimationhit.sf", new JsonContentLoader());
+            SpriteSheet horseSheetHit = Content.Load<SpriteSheet>("Enemies/myanmarhorseanimationhit.sf", new JsonContentLoader());
+            SpriteSheet elephantSheetHit = Content.Load<SpriteSheet>("Enemies/myanmarelephantanimationhit.sf", new JsonContentLoader());
+
+            soldierHit = new AnimatedSprite(soldierSheetHit);
+            horseHit = new AnimatedSprite(horseSheetHit);
+            elephantHit = new AnimatedSprite(elephantSheetHit);
 
 
-            cardBasicTurret = Content.Load<Texture2D>("CardBasicturret");
-            shootSpeedUpgrade = Content.Load<Texture2D>("ShootSpeedUpgrade");
-            rangeUpgrade = Content.Load<Texture2D>("RangeUpgrade");
+            turretBaseTexture = Content.Load<Texture2D>("Units/Base");
+            moneyCounterTexture = Content.Load<Texture2D>("UI/MoneyCounter");
+            rangeTexture = Content.Load<Texture2D>("Units/RangeTexture");
 
-            monster1Idle = Content.Load<Texture2D>("Laossoldier");
-            monster2Idle = Content.Load<Texture2D>("Laoselephant");
-            monster3Idle = Content.Load<Texture2D>("Laoshorse");
-            monsterHit = Content.Load<Texture2D>("Laossoldierhit");
-            monsterHit2 = Content.Load<Texture2D>("Laoselephanthit");
-            monsterHit3 = Content.Load<Texture2D>("Laoshorsehit");
-
-            turretBaseTexture = Content.Load<Texture2D>("Base");
-            moneyCounterTexture = Content.Load<Texture2D>("MoneyCounter");
-            rangeTexture = Content.Load<Texture2D>("RangeTexture");
-
-            basicTurretIdle = Content.Load<Texture2D>("BasicTurret");
-            basicTurretShoot = Content.Load<Texture2D>("BasicTurretShoot");
+            basicTurretIdle = Content.Load<Texture2D>("Units/BasicTurret");
+            basicTurretShoot = Content.Load<Texture2D>("Units/BasicTurretShoot");
 
             whiteRectangle = new Texture2D(GraphicsDevice, 1, 1);
             whiteRectangle.SetData(new[] { Color.White });
@@ -138,32 +171,46 @@ namespace Lanna_s_Defense
 
             this.IsMouseVisible = true;
         }
-        public static Texture2D changeMonster1Texture(Texture2D current, string type)
+        void MediaPlayer_MediaStateChanged(object sender, System.EventArgs e)
         {
-            if (current == monster1Idle)
+            // 0.0f is silent, 1.0f is full volume
+
+            MediaPlayer.Play(main);
+            MediaPlayer.Volume = 1.0f;
+        }
+        void MediaPlayer_MediaStateChanged2(object sender, System.EventArgs e)
+        {
+            // 0.0f is silent, 1.0f is full volume
+
+            MediaPlayer.Play(ingame);
+            MediaPlayer.Volume = 1.0f;
+        }
+        public static AnimatedSprite changeMonster1Texture(AnimatedSprite current, string type)
+        {
+            if (current == soldier)          
             {
-                return monsterHit;
+                return soldierHit;             
             }
-            if (current == monster2Idle)
+            if (current == horse)
             {
-                return monsterHit2;
+                return horseHit;
             }
-            if (current == monster3Idle)
+            if (current == elephant)
             {
-                return monsterHit3;
+                return elephantHit;
             }
             else
             {
                 switch (type)
                 {
                     case "normal":
-                        return monster1Idle;
+                        return soldier;
                     case "heavy":
-                        return monster2Idle;
+                        return elephant;
                     case "fast":
-                        return monster3Idle;
+                        return horse;
                     default:
-                        return monster1Idle;
+                        return soldier;
                 }
 
             }
@@ -227,8 +274,9 @@ namespace Lanna_s_Defense
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-           
+            float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            
+            
 
             switch (mCurrentScreen)
             {
@@ -263,17 +311,34 @@ namespace Lanna_s_Defense
                     enemyY += enemy.Speed * enemy.DirY * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                     enemy.Position = new Vector2(enemyX, enemyY);
+                    
+                    soldier.Play("goRight");                 
+                    elephant.Play("goRight"); 
+                    horse.Play("goRight");                 
+                    soldierHit.Play("rightHit");               
+                    elephantHit.Play("rightHit");               
+                    horseHit.Play("rightHit");
+                    soldier.Update(gameTime);
+                    elephant.Update(gameTime);
+                    horse.Update(gameTime);
+                    soldierHit.Update(gameTime);
+                    elephantHit.Update(gameTime);
+                    horseHit.Update(gameTime);
+
 
 
                 }
                 for (int i = 0; i < enemyList.Count; i++)
                 {
+                    
                     if (enemyList[i].Health <= 0)
                     {
                         EnemyDie(i);
                         break;
                     }
-                    if (enemyList[i].Position.X > _graphics.PreferredBackBufferWidth + enemyList[i].monsterTexture.Width)
+                    
+                    
+                    if (enemyList[i].Position.X > _graphics.PreferredBackBufferWidth)
                     {
                         Console.WriteLine("you took damage");
                         tempe = gt;
@@ -301,99 +366,80 @@ namespace Lanna_s_Defense
                 turret.EnemyUpdate();
                 turret.SetGameTime(staticGt);
             }
+            
             base.Update(gameTime);
         }
         void AddEnemy()
         {
-            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2) + 40);
+            Vector2 pos = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2) - 30);
+            Vector2 pos2 = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2) - 50);
+            Vector2 pos3 = new Vector2(-64 / 2, (_graphics.PreferredBackBufferHeight / 2) - 120);
             int num = getRandomNum();
-            if (num >= 55 - higherMonsterChance)
+            if (num >= 75 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path1, pos, 60f, gt, 35, monster1Idle, "normal");
+                Enemy enemy = new Enemy(path1, pos, 120f, gt, 3, soldier, "normal");
                 enemyList.Add(enemy);
+                
                 enemy.Start();
             }
-            else if (num >= 34 - higherMonsterChance)
+            else if (num >= 54 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path1_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            else
-            {
-                Enemy enemy = new Enemy(path1_fast, pos, 120f, gt, 35, monster3Idle, "fast");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            if (num >= 55 - higherMonsterChance)
-            {
-                Enemy enemy = new Enemy(path2, pos, 60f, gt, 35, monster1Idle, "normal");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            else if (num >= 34 - higherMonsterChance)
-            {
-                Enemy enemy = new Enemy(path2_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
+                Enemy enemy = new Enemy(path1_heavy, pos3, 30f, gt, 100, elephant, "heavy");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             else
             {
-                Enemy enemy = new Enemy(path2_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                Enemy enemy = new Enemy(path1_fast, pos2, 240f, gt, 7, horse, "fast");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             if (num >= 55 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path3, pos, 60f, gt, 35, monster1Idle, "normal");
+                Enemy enemy = new Enemy(path2, pos, 130f, gt, 3, soldier, "normal");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
-            else if (num >= 34 - higherMonsterChance)
+            else if (num >= 34 - higherMonsterChance) 
             {
-                Enemy enemy = new Enemy(path3_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            else
-            {
-                Enemy enemy = new Enemy(path3_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                Enemy enemy = new Enemy(path2_fast, pos2, 250f, gt, 7, horse, "fast");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             if (num >= 55 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path4, pos, 60f, gt, 35, monster1Idle, "normal");
+                Enemy enemy = new Enemy(path3, pos, 140f, gt, 3, soldier, "normal");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             else if (num >= 34 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path4_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            else
-            {
-                Enemy enemy = new Enemy(path4_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                Enemy enemy = new Enemy(path3_fast, pos2, 260f, gt, 7, horse, "fast");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             if (num >= 55 - higherMonsterChance)
             {
-                Enemy enemy = new Enemy(path5, pos, 60f, gt, 35, monster1Idle, "normal");
+                Enemy enemy = new Enemy(path4, pos, 150f, gt, 3, soldier, "normal");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            else if (num >= 34 - higherMonsterChance) 
+            {
+                Enemy enemy = new Enemy(path4_fast, pos2, 270f, gt, 7, horse, "fast");
+                enemyList.Add(enemy);
+                enemy.Start();
+            }
+            if (num >= 55 - higherMonsterChance)
+            {
+                Enemy enemy = new Enemy(path5, pos, 160f, gt, 3, soldier, "normal");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
             else if (num >= 34 - higherMonsterChance)
+  
             {
-                Enemy enemy = new Enemy(path5_heavy, pos, 60f, gt, 100, monster2Idle, "heavy");
-                enemyList.Add(enemy);
-                enemy.Start();
-            }
-            else
-            {
-                Enemy enemy = new Enemy(path5_fast, pos, 120f, gt, 35, monster3Idle, "fast");
+                Enemy enemy = new Enemy(path5_fast, pos2, 280f, gt, 7, horse, "fast");
                 enemyList.Add(enemy);
                 enemy.Start();
             }
@@ -413,7 +459,7 @@ namespace Lanna_s_Defense
                 Vector2 pos = position;
                 UpgradeCard shootUppgradeCard = new UpgradeCard(shootSpeedUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 55), 0f, new Vector2(32, 32));
                 UpgradeCard rangeUppgradeCard = new UpgradeCard(rangeUpgrade, new Vector2(static_graphics.PreferredBackBufferWidth - 232, static_graphics.PreferredBackBufferHeight / 2 + 170), 0f, new Vector2(32, 32));
-                Turret turret = new Turret(position, enemyList, 125f, staticGt, 60, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
+                Turret turret = new Turret(position, enemyList, 125f, staticGt, 240, basicTurretIdle, shootUppgradeCard, rangeUppgradeCard);
 
                 turretList.Add(turret);
             }
@@ -428,7 +474,7 @@ namespace Lanna_s_Defense
 
 
         void EnemyDie(int index)
-        {
+        {          
             enemiesKilled++;
             score += 50;
             enemyList.RemoveAt(index);
@@ -437,23 +483,25 @@ namespace Lanna_s_Defense
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            
 
             switch (mCurrentScreen)
             {
                 case ScreenState.Title:
                     {
-                        DrawMenu(); break;
+                        DrawMenu(); 
+                        break;
                     }
                 case ScreenState.Gameplay:
                     {
-
-                        DrawGameplay(); break;
+                        DrawGameplay(); 
+                        break;
                     }
             }
             base.Draw(gameTime);
         }
 
+        
         void DrawTexture(Texture2D texture, Vector2 position, float rotation, Vector2 offset, Vector2 scale)
         {
             _spriteBatch.Begin();
@@ -469,6 +517,15 @@ namespace Lanna_s_Defense
                 0f
             );
 
+
+            _spriteBatch.End();
+        }
+
+        void DrawFrame(AnimatedSprite enemy, Vector2 position, float rotation, Vector2 offset, Vector2 scale)
+        {
+            _spriteBatch.Begin();
+            enemy.Draw(_spriteBatch, position, rotation, scale);
+            
 
             _spriteBatch.End();
         }
@@ -495,7 +552,7 @@ namespace Lanna_s_Defense
                 font,
                 content,
                 position,
-                Color.Black
+                Color.White
             );
             _spriteBatch.End();
         }
@@ -522,13 +579,14 @@ namespace Lanna_s_Defense
 
             foreach (Enemy enemy in enemyList)
             {
-                DrawTexture(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 80), Vector2.One);
+                DrawFrame(enemy.monsterTexture, enemy.Position, 0, new Vector2(32, 360), Vector2.One);
             }
 
             foreach (Turret turret in turretList)
             {
                 DrawTexture(turretBaseTexture, turret.position, 0, new Vector2(32, 32), Vector2.One);
                 DrawTexture(turret.basicTurretTexture, turret.position, turret.rotation, new Vector2(32, 32), Vector2.One);
+
 
 
                 if (turret.showUpgrades)

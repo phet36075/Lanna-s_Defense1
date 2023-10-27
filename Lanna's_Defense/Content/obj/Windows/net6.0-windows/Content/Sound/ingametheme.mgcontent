@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Sound/ingametheme.mp3</SourceFile>
+  <SourceTime>2023-10-24T19:54:56.4545099+07:00</SourceTime>
+  <DestFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Sound/ingametheme.xnb</DestFile>
+  <DestTime>2023-10-27T16:16:24.1723783+07:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T18:44:56+07:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Sound/ingametheme.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

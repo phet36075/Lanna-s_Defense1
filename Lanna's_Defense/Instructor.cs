@@ -2,6 +2,10 @@ using System;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Globalization;
+using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
 
 namespace Lanna_s_Defense
 {
@@ -14,6 +18,7 @@ namespace Lanna_s_Defense
         public double GameT {get; set;}
         public int dx = 0;
         public int dy = 0;
+        public int row = 5;
         public Instructor(List<String> inst, double GameT)
         {
             this.instructions = inst;
@@ -51,21 +56,25 @@ namespace Lanna_s_Defense
                     // printInstruction("Moving Right", amount);
                     dx = 1;
                     dy = 0;
+                    
                     break;
                 case 'l':
                     // printInstruction("Moving Left", amount);
                     dx = -1;
                     dy = 0;
+                   
                     break;
                 case 'u':
                     // printInstruction("Moving Up", amount);
                     dx = 0;
                     dy = -1;
+                    
                     break;
                 case 'd':
                     // printInstruction("Moving Down", amount);
                     dx = 0;
                     dy = 1;
+                    
                     break;
                 case 's':
                     // printInstruction("Stop", amount);

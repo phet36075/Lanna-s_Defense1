@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarelephantanimationhit.sf</SourceFile>
+  <SourceTime>2023-10-27T14:49:36.9142094+07:00</SourceTime>
+  <DestFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Content/Enemies/myanmarelephantanimationhit.xnb</DestFile>
+  <DestTime>2023-10-27T15:33:54.3503091+07:00</DestTime>
+  <Importer>SpriteFactoryContentImporter</Importer>
+  <ImporterTime>2023-09-15T00:15:36+07:00</ImporterTime>
+  <Processor>SpriteFactoryContentProcessor</Processor>
+  <ProcessorTime>2023-09-15T00:15:36+07:00</ProcessorTime>
+  <Parameters>
+    <Key>ContentType</Key>
+    <Value>MonoGame.Extended MonoGame.Extended.Animations.SpriteFactory.SpriteFactoryFileReader, MonoGame.Extended.Animations</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
