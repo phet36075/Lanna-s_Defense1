@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarsoldier.png</SourceFile>
-  <SourceTime>2023-10-25T22:29:34.8847277+07:00</SourceTime>
-  <DestFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Enemies/myanmarsoldier.xnb</DestFile>
-  <DestTime>2023-10-27T16:14:51.6012958+07:00</DestTime>
+  <SourceFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarsoldier.png</SourceFile>
+  <SourceTime>2023-10-28T01:59:03.3222399+07:00</SourceTime>
+  <DestFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/bin/Windows/Enemies/myanmarsoldier.xnb</DestFile>
+  <DestTime>2023-10-28T17:18:22.9991213+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T18:44:56+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

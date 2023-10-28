@@ -19,6 +19,7 @@ namespace Lanna_s_Defense
 {
     public class Game1 : Game
     {
+        #region Variable
         List<String> path1 = new List<string>() { "r3.45" };
         List<String> path1_heavy = new List<string>() { "r3.45" };
         List<String> path1_fast = new List<string>() { "r3.45" };
@@ -39,7 +40,8 @@ namespace Lanna_s_Defense
         static List<Turret> turretList = new List<Turret>();
 
         Song main, ingame;
-
+        List<SoundEffect> soundEffects;
+        bool IsGameOver = false;
         double gt = 0;
         static double staticGt = 0;
         double timeSinceLast = 0;
@@ -100,12 +102,16 @@ namespace Lanna_s_Defense
         Texture2D menuTexture;
         Texture2D gameplayTexture;
         ScreenState mCurrentScreen;
+        #endregion
         enum ScreenState
         {
             Title,
             Gameplay,
+            
 
         }
+        int state = -10;
+       
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -113,6 +119,9 @@ namespace Lanna_s_Defense
             static_graphics = _graphics;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            soundEffects = new List<SoundEffect>();
+
+           
         }
         
         protected override void Initialize()
@@ -131,8 +140,12 @@ namespace Lanna_s_Defense
             font = Content.Load<SpriteFont>("Gamefont");
             background1Texture = Content.Load<Texture2D>("Map/Map1");
 
+            soundEffects.Add(Content.Load<SoundEffect>("Sound/gamestart"));
+            soundEffects.Add(Content.Load<SoundEffect>("Sound/gameover"));
             this.main = Content.Load<Song>("Sound/maintheme");
             this.ingame = Content.Load<Song>("Sound/ingametheme");
+           
+
             MediaPlayer.Play(main);
             MediaPlayer.IsRepeating = true;
 
@@ -275,17 +288,20 @@ namespace Lanna_s_Defense
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            
-            
 
+           
+            
+            
             switch (mCurrentScreen)
             {
                 case ScreenState.Title:
                     {
+                        
                         UpdateTitle(); break;
                     }
                 case ScreenState.Gameplay:
                     {
+                        
                         UpdateGameplay();
                         mouseController.MouseUpdate();
 
@@ -296,6 +312,7 @@ namespace Lanna_s_Defense
                         staticGt = gt; break;
 
                     }
+               
             }
            
 
@@ -474,12 +491,15 @@ namespace Lanna_s_Defense
 
 
         void EnemyDie(int index)
-        {          
+        {
+            soundEffects[0].CreateInstance().Play();
             enemiesKilled++;
+
             score += 50;
             enemyList.RemoveAt(index);
         }
 
+        #region DrawSection
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
@@ -560,9 +580,11 @@ namespace Lanna_s_Defense
         private void DrawMenu()
         {
            
+           
         }
         private void DrawGameplay()
         {
+           
             DrawTexture(background1Texture, new Vector2(32, 32), 0, new Vector2(32, 32), Vector2.One);
             DrawTexture(moneyCounterTexture, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height / 2), 0, new Vector2(32, 32), Vector2.One);
             DrawText(font, new Vector2(_graphics.PreferredBackBufferWidth / 40, _graphics.PreferredBackBufferHeight - moneyCounterTexture.Height + 25), score.ToString());
@@ -570,6 +592,9 @@ namespace Lanna_s_Defense
 
             if (playerHealth <= 0)
             {
+                Gameoveraudio();
+                
+               
                 DrawText(font, new Vector2(-50 + _graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2), "YOU DIED");
                 if (gt > tempe + 3000)
                 {
@@ -598,10 +623,14 @@ namespace Lanna_s_Defense
                     // Console.WriteLine(turret.rangeTextureScale);
                 }
             }
+            
+            
         }
 
+        #endregion
         private void UpdateGameplay()
         {
+            
             if (Keyboard.GetState().IsKeyDown(Keys.A) == true)
             {
                 mCurrentScreen = ScreenState.Title;
@@ -610,11 +639,31 @@ namespace Lanna_s_Defense
         }
         private void UpdateTitle()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.B) == true)
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter))
             {
+                soundEffects[0].CreateInstance().Play();
+                MediaPlayer.Play(ingame);
+            }
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter) == true)
+            {
+                
                 mCurrentScreen = ScreenState.Gameplay;
+                
             }
 
+        }
+        private void Gameoveraudio()
+        {
+            state += 1;
+            if(state == 1)
+            {
+                MediaPlayer.Stop();
+                soundEffects[1].CreateInstance().Play();
+            }
+            
+
+            
         }
     }
 }

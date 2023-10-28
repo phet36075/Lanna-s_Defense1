@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarelephantanimation.sf</SourceFile>
-  <SourceTime>2023-10-27T10:26:18.4296159+07:00</SourceTime>
-  <DestFile>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/bin/Windows/Enemies/myanmarelephantanimation.xnb</DestFile>
-  <DestTime>2023-10-27T16:14:51.4566833+07:00</DestTime>
+  <SourceFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarelephantanimation.sf</SourceFile>
+  <SourceTime>2023-10-28T01:59:03.3192489+07:00</SourceTime>
+  <DestFile>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/bin/Windows/Enemies/myanmarelephantanimation.xnb</DestFile>
+  <DestTime>2023-10-28T17:18:22.8946277+07:00</DestTime>
   <Importer>SpriteFactoryContentImporter</Importer>
   <ImporterTime>2023-09-15T00:15:36+07:00</ImporterTime>
   <Processor>SpriteFactoryContentProcessor</Processor>
