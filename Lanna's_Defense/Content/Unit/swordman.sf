@@ -1,0 +1,21 @@
+{
+  "textureAtlas": {
+    "texture": "swordman.png",
+    "regionWidth": 160,
+    "regionHeight": 160
+  },
+  "cycles": {
+    "idleRight": {
+      "frames": [0]
+    },
+    "attackRight": {
+      "frames": [1,2]
+    },
+    "idleLeft": {
+      "frames": [3]
+    },
+    "animation3": {
+      "frames": [4,5]
+    }
+  }
+}

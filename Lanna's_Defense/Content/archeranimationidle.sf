@@ -1,0 +1,15 @@
+{
+  "textureAtlas": {
+    "texture": "archer.png",
+    "regionWidth": 56,
+    "regionHeight": 116
+  },
+  "cycles": {
+    "idle1": {
+      "frames": [0]
+    },
+    "animation1": {
+      "frames": [5]
+    }
+  }
+}

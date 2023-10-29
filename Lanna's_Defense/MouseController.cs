@@ -18,6 +18,8 @@ namespace Lanna_s_Defense
         public MouseState mouseState = Mouse.GetState();
         private MouseState oldState;
         public List<Turret> _turretList = new List<Turret>();
+        public List<Swordman> _turretList1 = new List<Swordman>();
+        public List<Cannon> _turretList2 = new List<Cannon>();
         float turretWidth {get; set;}
         float turretHeight {get; set;}
         int hoveringTurretIndex = 0;
@@ -25,14 +27,33 @@ namespace Lanna_s_Defense
         bool hasBeenPressed = false;
         public double gt {get; set;}
         public double timeSinceLast = 0;
+        string click = "turret";
         
-        
-        public MouseController(List<Turret> _turretList, float turretWidth, float turretHeight, double gt){
+        public MouseController(List<Turret> _turretList, float turretWidth, float turretHeight, double gt)
+        {
             this._turretList = _turretList;
             this.turretWidth = turretWidth;
             this.turretHeight = turretHeight;
             this.gt = gt;
+
         }
+        public MouseController(List<Swordman> _turretList1, float turretWidth, float turretHeight, double gt)
+        {
+            this._turretList1 = _turretList1;
+            this.turretWidth = turretWidth;
+            this.turretHeight = turretHeight;
+            this.gt = gt;
+
+        }
+        public MouseController(List<Cannon> _turretList2, float turretWidth, float turretHeight, double gt)
+        {
+            this._turretList2 = _turretList2;
+            this.turretWidth = turretWidth;
+            this.turretHeight = turretHeight;
+            this.gt = gt;
+
+        }
+
         public void MouseUpdate(){
             var mousePosition = Mouse.GetState().Position;
             mousePos = new Vector2(mousePosition.X, mousePosition.Y);
@@ -48,69 +69,90 @@ namespace Lanna_s_Defense
             }
             //Console.WriteLine(_turretList[hoveringTurretIndex].rangeUppgrade.hovering);
             MouseState newState = Mouse.GetState(); 
-            if(newState.LeftButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released)
-            {   
-                if(_turretList.Count > 0){
-                    CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].shootUppgrade);
-                    CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].rangeUppgrade);
-                }
-                if(mousePosition.Y < 720){
-                    if(_turretList.Count > 0){
-                        if(_turretList[hoveringTurretIndex].shootUppgrade.hovering == true){
-                             //if(_turretList[hoveringTurretIndex].damage < 2){
-                                if(Game1.score >= 400){    
+            
+            
+                if (newState.LeftButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released)
+                {
+
+                    if (_turretList.Count > 0)
+                    {
+                        CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].shootUppgrade);
+                        CheckUpgradeCollision(mousePos, _turretList[hoveringTurretIndex].rangeUppgrade);
+                    }
+                    if (mousePosition.Y < 720)
+                    {
+                        if (_turretList.Count > 0)
+                        {
+                            if (_turretList[hoveringTurretIndex].shootUppgrade.hovering == true)
+                            {
+                                //if(_turretList[hoveringTurretIndex].damage < 2){
+                                if (Game1.score >= 400)
+                                {
                                     _turretList[hoveringTurretIndex].damage++;
                                     Game1.score -= 400;
-                                    Console.WriteLine("Aro +1 damage");
+                                    Console.WriteLine("+1 damage");
                                 }
-                             //}
-                        }else if(_turretList[hoveringTurretIndex].rangeUppgrade.hovering == true){
-                            if(Game1.score >= 400 && _turretList[hoveringTurretIndex].rangeTextureScale < 1.6f){   
-                                _turretList[hoveringTurretIndex].rangeTextureScale *= 1.25f;
+                                //}
+                            }
+                            else if (_turretList[hoveringTurretIndex].rangeUppgrade.hovering == true)
+                            {
+                                if (Game1.score >= 400 && _turretList[hoveringTurretIndex].rangeTextureScale < 1.6f)
+                                {
+                                    _turretList[hoveringTurretIndex].rangeTextureScale *= 1.25f;
 
-                                _turretList[hoveringTurretIndex].turretRange *= 1.25f;
-                                Game1.score -= 400;
-                                Console.WriteLine(_turretList[hoveringTurretIndex].rangeTextureScale);
-                            }
-                        }
-                        else if(_turretList[hoveringTurretIndex].mouseIsHovering && _turretList[hoveringTurretIndex].showUpgrades == false){
-                            Console.WriteLine("Selecting Aro");
-                            
-                            _turretList[hoveringTurretIndex].showUpgrades = true;
-                        }
-                        else if(_turretList[hoveringTurretIndex].showUpgrades == true){
-                            _turretList[hoveringTurretIndex].showUpgrades = false;
-                        }
-                        else{
-                            foreach(Turret turret in _turretList){
-                                if(turret.mouseIsHovering){
-                                    break;
+                                    _turretList[hoveringTurretIndex].turretRange *= 1.25f;
+                                    Game1.score -= 400;
+                                    Console.WriteLine(_turretList[hoveringTurretIndex].rangeTextureScale);
                                 }
                             }
-                            Game1.AddTurret(mousePos);
-                            _turretList[hoveringTurretIndex].showUpgrades = false;
+                            else if (_turretList[hoveringTurretIndex].mouseIsHovering && _turretList[hoveringTurretIndex].showUpgrades == false)
+                            {
+                                Console.WriteLine("Selecting Unit");
+
+                                _turretList[hoveringTurretIndex].showUpgrades = true;
+                            }
+                            else if (_turretList[hoveringTurretIndex].showUpgrades == true)
+                            {
+                                _turretList[hoveringTurretIndex].showUpgrades = false;
+                            }
+                            else
+                            {
+                                foreach (Turret turret in _turretList)
+                                {
+                                    if (turret.mouseIsHovering)
+                                    {
+                                        break;
+                                    }
+                                }
+                                Game1.AddTurret(mousePos);
+                                _turretList[hoveringTurretIndex].showUpgrades = false;
+                            }
                         }
-                    }else{
-                        Game1.AddTurret(mousePos);
+                        else
+                        {
+                            Game1.AddTurret(mousePos);
+                        }
                     }
+
                 }
-                
-            }
-            if(newState.RightButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released)
-            {
-                if(!hasBeenPressed){
-                    hasBeenPressed = true;
-                    if(_turretList[hoveringTurretIndex].mouseIsHovering == true)
+                if (newState.RightButton == ButtonState.Pressed && oldState.LeftButton == ButtonState.Released)
+                {
+                    if (!hasBeenPressed)
                     {
-                        _turretList[hoveringTurretIndex].beenPressed = true;
-                        Game1.DeleteTurret(hoveringTurretIndex);
+                        hasBeenPressed = true;
+                        if (_turretList[hoveringTurretIndex].mouseIsHovering == true)
+                        {
+                            _turretList[hoveringTurretIndex].beenPressed = true;
+                            Game1.DeleteTurret(hoveringTurretIndex);
+                        }
                     }
+
                 }
-                
-            }
-            oldState = newState; 
+                oldState = newState;
+
             
         }
+            
         void CheckUpgradeCollision(Vector2 mousePos, UpgradeCard upgrade){            
             
             if(_turretList.Count > 0){

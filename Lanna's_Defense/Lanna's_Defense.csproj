@@ -12,6 +12,20 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Content\archeranimation.sf" />
+    <None Remove="Content\archeranimationidle.sf" />
+    <None Remove="Content\cannonanimation.sf" />
+    <None Remove="Content\cannonanimationidle.sf" />
+    <None Remove="Content\myanmarelephantanimation.sf" />
+    <None Remove="Content\myanmarelephantanimationhit.sf" />
+    <None Remove="Content\Unit\archer.sf" />
+    <None Remove="Content\Unit\archeridle.sf" />
+    <None Remove="Content\Unit\cannon.sf" />
+    <None Remove="Content\Unit\cannonidle.sf" />
+    <None Remove="Content\Unit\swordman.sf" />
+    <None Remove="Content\Unit\swordmanidle.sf" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +52,24 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Content\Enemies\myanmarsoldieranimationhit.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\archeranimation.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\archeranimationidle.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\cannonanimation.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\cannonanimationidle.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\swordmananimation.sf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\Unit\swordmananimationidle.sf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

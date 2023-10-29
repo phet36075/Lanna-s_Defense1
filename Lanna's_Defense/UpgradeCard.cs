@@ -7,6 +7,9 @@ using static System.Net.Mime.MediaTypeNames;
 using System.Collections;
 using System.Collections.Generic;
 using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
 
 
 namespace Lanna_s_Defense

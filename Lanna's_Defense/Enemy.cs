@@ -72,7 +72,7 @@ namespace Lanna_s_Defense
 
         public void TakeDamage(int dmg)
         {
-            dmg = 1;
+            dmg = 2;
             Health -= dmg;
             monsterTexture = Game1.changeMonster1Texture(monsterTexture, type);
            

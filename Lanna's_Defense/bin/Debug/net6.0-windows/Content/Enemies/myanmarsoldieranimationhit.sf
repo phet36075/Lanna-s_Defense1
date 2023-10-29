@@ -10,10 +10,12 @@
       "frameDuration": 0.8
     },
     "upHit": {
-      "frames": [12,13,14,15]
+      "frames": [ 12, 13, 14, 15 ],
+      "frameDuration": 0.8
     },
-    "animation2": {
-      "frames": [4,5,6,7]
+    "downHit": {
+      "frames": [ 4, 5, 6, 7 ],
+      "frameDuration": 0.8
     }
   }
 }

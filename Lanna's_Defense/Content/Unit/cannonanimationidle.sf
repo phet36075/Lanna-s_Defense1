@@ -1,0 +1,17 @@
+{
+  "textureAtlas": {
+    "texture": "cannon.png",
+    "regionWidth": 100,
+    "regionHeight": 100
+  },
+  "cycles": {
+    "idle1": {
+      "frames": [ 0 ],
+      "frameDuration": 0.8
+    },
+    "idle2": {
+      "frames": [ 12 ],
+      "frameDuration": 0.8
+    }
+  }
+}

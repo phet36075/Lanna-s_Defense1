@@ -1,0 +1,27 @@
+{
+  "textureAtlas": {
+    "texture": "myanmarelephant.png",
+    "regionWidth": 400,
+    "regionHeight": 400
+  },
+  "cycles": {
+    "goRight": {
+      "frames": [16,17,18,19]
+    },
+    "goUp": {
+      "frames": [8,9,10,11]
+    },
+    "goDown": {
+      "frames": [0,1,2,3]
+    },
+    "goRightHit": {
+      "frames": [20,21,22,23]
+    },
+    "goUpHit": {
+      "frames": [12,13,14,15]
+    },
+    "animation5": {
+      "frames": [4,5,6,7]
+    }
+  }
+}

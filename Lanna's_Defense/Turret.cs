@@ -5,12 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using _321_Lab05_3;
+using MonoGame.Extended.Sprites;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Content;
+
 
 namespace Lanna_s_Defense
 {
     internal class Turret
     {
-        public Texture2D basicTurretTexture {get; set;}
+        public AnimatedSprite basicTurretTexture {get; set;}
         public bool mouseIsHovering = false;
         public bool beenPressed = false;
         public Vector2 position {get; set;}
@@ -41,9 +45,9 @@ namespace Lanna_s_Defense
         public UpgradeCard shootUppgrade;
         public UpgradeCard rangeUppgrade;
 
-        public float rangeTextureScale = 1f;
+        public float rangeTextureScale = 1.5f;
 
-        public Turret(Vector2 position, List<Enemy> enemies, float turretRange, double gt, int shootRate, Texture2D basicTurretTexture, UpgradeCard shootUppgrade, UpgradeCard rangeUppgrade){
+        public Turret(Vector2 position, List<Enemy> enemies, float turretRange, double gt, int shootRate, AnimatedSprite basicTurretTexture, UpgradeCard shootUppgrade, UpgradeCard rangeUppgrade){
             this.position = position;
             this.enemies = enemies;
             this.turretRange = turretRange;
@@ -105,7 +109,7 @@ namespace Lanna_s_Defense
         void GetRotation(Enemy target){
 
             if(target != null && targetFound){
-                lookDirX = position.X - target.Position.X;
+                lookDirX = position.X + target.Position.X;
                 lookDirY = position.Y - target.Position.Y;
 
                 if (gt > animTime + shootRate)

@@ -4,36 +4,70 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/../../../../../Downloads/SoundEffect - LannaDefense/SoundEffect - LannaDefense/gameover.mp3</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarelephant.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarelephantanimation.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarelephantanimationhit.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarelephanthit.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarhorse.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarhorseanimation.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarhorseanimationhit.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarhorsehit.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarsoldier.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarsoldieranimation.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarsoldieranimationhit.sf</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Enemies/myanmarsoldierhit.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/GameFont.spritefont</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Map/Map1.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Sound/gameover.mp3</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Sound/gamestart.mp3</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Sound/ingametheme.mp3</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Sound/maintheme.mp3</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/UI/CardBasicturret.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/UI/MoneyCounter.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/UI/RangeUpgrade.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/UI/ShootSpeedUpgrade.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Units/Base.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Units/BasicTurret.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Units/BasicTurretShoot.png</File>
-    <File>C:/Users/petch/source/repos/Lanna's_Defense/Lanna's_Defense/Content/Units/RangeTexture.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/cursor.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarelephant.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarelephantanimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarelephantanimationhit.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarhorse.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarhorseanimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarhorseanimationhit.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarsoldier.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarsoldieranimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Enemies/myanmarsoldieranimationhit.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/GameFont.spritefont</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/GameMenu.spritefont</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Gameover.spritefont</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Map/Background.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Map/Gamelogo.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Map/Map1.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Sound/gameover.mp3</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Sound/gamestart.mp3</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Sound/ingametheme.mp3</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Sound/maintheme.mp3</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/archerbutton.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/cannonbutton.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/CardBasicturret.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/CardBasicturret1.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/CardBasicturret2.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/CardBasicturret3.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/HpCounter.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/MoneyCounter.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/RangeUpgrade.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/ShootSpeedUpgrade.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/UI/swordmanbutton.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/archer.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/archeranimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/archeranimationidle.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/Base.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/cannon.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/cannonanimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/cannonanimationidle.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/RangeTexture.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/RangeTexture2.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/RangeTexture3.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/swordman.png</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/swordmananimation.sf</File>
+    <File>D:/Lanna-s_Defense/Lanna-s_Defense1/Lanna's_Defense/Content/Unit/swordmananimationidle.sf</File>
   </SourceFiles>
   <DestFiles>
-    <File>Sound/gameover.mp3</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

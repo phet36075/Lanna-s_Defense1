@@ -7,22 +7,27 @@
   "cycles": {
     "goRight": {
       "frames": [ 16, 17, 18, 19 ],
-      "frameDuration": 0.75
+      "frameDuration": 0.8
     },
     "goUp": {
-      "frames": [8,9,10,11]
+      "frames": [ 8, 9, 10, 11 ],
+      "frameDuration": 0.8
     },
     "goDown": {
-      "frames": [0,1,2,3]
+      "frames": [ 0, 1, 2, 3 ],
+      "frameDuration": 0.8
     },
     "goRightHit": {
-      "frames": [20,21,22,23]
+      "frames": [ 20, 21, 22, 23 ],
+      "frameDuration": 0.8
     },
     "goUpHit": {
-      "frames": [12,13,14,15]
+      "frames": [ 12, 13, 14, 15 ],
+      "frameDuration": 0.8
     },
-    "animation5": {
-      "frames": [4,5,6,7]
+    "goDownHit": {
+      "frames": [ 4, 5, 6, 7 ],
+      "frameDuration": 0.8
     }
   }
 }
